@@ -26,6 +26,13 @@
       color: #909fb2;
       margin: 0 0 0 55px;
       letter-spacing: -0.5px;
+      > a {
+        text-decoration: none;
+        color:black;
+        &:hover {
+          color:#5A368D;
+        }
+      }
     }
   }
 }
@@ -38,17 +45,13 @@
 
 .logo-container {
   position: absolute;
-  margin-left: 122px;
-  margin-top: 36px;
+  margin-left: 120px;
+  margin-top: 33px;
   display: flex;
   align-items: center;
 }
 
 .logo {
-  width: 174px;
-  height: 24px;
+  width: 180px;
+  height: 36px;
 }
-
-.menu {
-    
-  }

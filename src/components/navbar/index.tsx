@@ -1,33 +1,32 @@
 import React from 'react'
-import logo from '../../assets/logo.svg'
+import { Link } from 'react-router-dom'
+import Logo from './logo'
 import '../../styles/navbar.scss'
-// import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
     <div className="navigation">
       <div className="container container--flex container--flex__centered">
         <div className="logo-container">
-          <a className="logo" href="/">
-            <img src={logo} />
-            {/* <Logo /> */}
-          </a>
+          <Link className="logo" to="/">
+            <Logo />
+          </Link>
         </div>
         <ul className="menu">
           <li>
-            <a href="/">About Us</a>
+            <Link to="/aboutus">About Us</Link>
           </li>
           <li>
-            <a href="/">Services</a>
+            <Link to="/services">Services</Link>
           </li>
           <li>
-            <a href="/">Technologies</a>
+            <Link to="/technologies">Technologies</Link>
           </li>
           <li>
-            <a href="/">Pricing</a>
+            <Link to="/pricing">Pricing</Link>
           </li>
           <li>
-            <a href="/">Contact Us</a>
+            <Link to="/contactus">Contact Us</Link>
           </li>
         </ul>
       </div>
