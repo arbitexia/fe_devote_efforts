@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from './logo'
+import logo from '../../assets/images/logo.svg'
 import '../../styles/navbar.scss'
 
 function Navbar() {
@@ -9,7 +9,7 @@ function Navbar() {
       <div className="container container--flex container--flex__centered">
         <div className="logo-container">
           <Link className="logo" to="/">
-            <Logo />
+            <img src={logo} className="nav-logo" alt="logo" />
           </Link>
         </div>
         <ul className="menu">
