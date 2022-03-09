@@ -13,7 +13,7 @@
     align-items: center;
     .logo-container {
       height: 100vh;
-      padding-left: 8%;
+      padding-left: 120px;
       padding-top: 33px;
       .nav-logo{
         width: 194px;
@@ -23,7 +23,7 @@
     .dropdown {
       display: none;
       margin: 44px 20px auto;
-      @media screen and (max-width: $medium) {
+      @media screen and (max-width: $smedium) {
         display: flex;
         font-weight: 500;
         font-size: 16px;
@@ -45,7 +45,7 @@
   justify-content: center;
   align-items: left;
   position: relative;
-  margin: 44px 8% auto;
+  margin: 44px 124px auto;
   > li {
     margin-left: 55px;
     font-size: 20px;
@@ -54,7 +54,6 @@
     font-size: 16px;
     font-weight: 500;
     text-align: left;
-    // margin: 0 0 0 55px;
     letter-spacing: -0.5px;
     > a {
       text-decoration: none;
@@ -65,7 +64,20 @@
     }
   }
 }
+ 
 @media screen and (max-width: $medium){
+  .navigation .container .logo-container {
+    padding-left: 80px;
+  }
+  .menu {
+    margin: 44px 80px auto;
+  } 
+}
+
+@media screen and (max-width: $smedium) {
+  .navigation .container .logo-container {
+    padding-left: 20px;
+  }
   .menu {
     margin:0;
     padding:0;
@@ -96,5 +108,36 @@
   }
 }
 
-
-
+@media screen and (max-width: $small) {
+  .navigation .container .logo-container {
+    padding-left: 20px;
+  }
+  .menu {
+    margin:0;
+    padding:0;
+    flex-direction: column;
+    height: auto;
+    display: flex;
+    position: fixed;
+    width: 120px;
+    left: calc(100% - 125px);
+    top: 70px;
+    background-color: $back-main;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px -2px rgba(9,30,66,0.25),0 0 1px rgba(9,30,66,0.31);
+    > li{
+      margin: 0px;
+      padding: 8px;
+      &:hover{
+        background-color: $hover-main;
+      }
+    }
+    a {
+      text-decoration: none;
+      color:black;
+      &:hover {
+        color:black;
+      }
+    }
+  }
+}

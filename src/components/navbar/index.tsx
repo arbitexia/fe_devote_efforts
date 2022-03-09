@@ -1,21 +1,29 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
 import '../../styles/navbar.scss'
 
 function Navbar() {
-  const [toggleMenu, setToggleMenu] = useState(false)
+  const [isToggled, setToggle] = useState(false)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const toggleMenu = useRef(null)
   useEffect(() => {
     const changeWidth = () => {
       setScreenWidth(window.innerWidth)
     }
-
+    const globalClick = (e) => {
+      console.log(toggleMenu.current)
+      console.log(e.target)
+      //if (isToggled && toggleMenu.current.contains(e.target)) return
+      //setToggle(false)
+      window.removeEventListener('click', globalClick)
+    }
+    window.addEventListener('click', globalClick)
     window.addEventListener('resize', changeWidth)
     return () => {
       window.removeEventListener('resize', changeWidth)
     }
-  }, [])
+  }, [isToggled, toggleMenu])
   return (
     <div className="navigation">
       <div className="container container--flex container--flex__centered">
@@ -24,8 +32,13 @@ function Navbar() {
             <img src={logo} className="nav-logo" alt="logo" />
           </Link>
         </div>
-        {(toggleMenu || screenWidth > 1156) && (
-          <ul className="menu">
+        {(isToggled || screenWidth > 1110) && (
+          <ul
+            className="menu"
+            ref={(el) => {
+              toggleMenu.current = el
+            }}
+          >
             <li>
               <Link to="/aboutus">About Us</Link>
             </li>
@@ -46,7 +59,7 @@ function Navbar() {
         <button
           className="dropdown"
           onClick={() => {
-            setToggleMenu(!toggleMenu)
+            setToggle(!isToggled)
           }}
         >
           Menu
