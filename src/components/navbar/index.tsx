@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
 import '../../styles/navbar.scss'
 
 function Navbar() {
+  const [toggleMenu, setToggleMenu] = useState(false)
   return (
     <div className="navigation">
       <div className="container container--flex container--flex__centered">
@@ -29,6 +30,14 @@ function Navbar() {
             <Link to="/contactus">Contact Us</Link>
           </li>
         </ul>
+        <button
+          className="dropdown"
+          onClick={() => {
+            setToggleMenu(!toggleMenu)
+          }}
+        >
+          Menu
+        </button>
       </div>
     </div>
   )

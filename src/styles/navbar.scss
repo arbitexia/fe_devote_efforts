@@ -12,36 +12,76 @@
     justify-content: space-between;
     align-items: center;
     .logo-container {
-      margin-left: 120px;
-      margin-top: 33px;
+      height: 100vh;
+      padding-left: 8%;
+      padding-top: 33px;
       .nav-logo{
         width: 194px;
         height: 35px;
       }
     }
-    .menu {
-      display: flex;
-      margin: 44px 124px auto;
-  
-      @media screen and (min-width: $small) {
+    .dropdown {
+      display: none;
+      margin: 44px 20px auto;
+      @media screen and (max-width: $medium) {
         display: flex;
-      }
-  
-      > li {
-        display: inline-block;
-        font-size: 16px;
         font-weight: 500;
-        margin: 0 0 0 55px;
+        font-size: 16px;
+        line-height: 90%;
+        color: #5A368D;
+        align-items: center;
         letter-spacing: -0.5px;
-        > a {
-          text-decoration: none;
-          color:black;
-          &:hover {
-            color:#5A368D;
-          }
-        }
+        border: none;
+      }
+    }
+    
+  }
+}
+
+.menu {
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  position: relative;
+  margin: 44px 8% auto;
+  > li {
+    margin-left: 55px;
+    font-size: 20px;
+    color: #f1f1f1;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    // margin: 0 0 0 55px;
+    letter-spacing: -0.5px;
+    > a {
+      text-decoration: none;
+      color:black;
+      &:hover {
+        color:#5A368D;
       }
     }
   }
 }
+@media screen and (max-width: $medium){
+  .menu {
+    flex-direction: column;
+    height: auto;
+    display: none;
+    position: relative;
+    text-align: left;
+    > li{
+      margin-right: 0px;
+      padding: 20px 0;
+    }
+    a {
+      text-decoration: none;
+      color:black;
+    }
+  }
+}
+
+
 
