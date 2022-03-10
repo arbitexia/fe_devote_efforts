@@ -10,19 +10,15 @@
   .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     .logo-container {
-      margin-left: 120px;
-      margin-top: 30px;
+      margin: auto;
+	    margin-top: 34px;
       .nav-logo{
         width: 197px;
-        height: 41px;
       }
     }
     .dropdown {
       display: none;
-      margin-top: 44px;
-      margin-right: 20px;
       font-weight: 500;
       font-size: 16px;
       line-height: 90%;
@@ -32,21 +28,23 @@
       letter-spacing: -0.5px;
       border: none;
     }
+    
     .menu {
-      list-style-type: none;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: left;
-      position: relative;
+      margin: 0;
+      margin: auto;
+      margin-top: 44px;
       padding: 0;
-      margin: 44px 124px 0 0;
+      
+      list-style-type: none;
+      position: relative;
+      display: flex;
       > li {
-        margin-left: 55px;
+        padding: 0 18px;
         color: #f1f1f1;
         cursor: pointer;
         font-size: 16px;
         font-weight: 500;
+        line-height: 90%;
         text-align: left;
         letter-spacing: -0.5px;
         > a {
@@ -57,42 +55,6 @@
           }
         }
       }
-      .logo-container {
-        margin-top: 36px;
-      }
-    }
-  }
-}
-
-
- 
-@media screen and (max-width: $large){
-  .navigation .container {
-    .logo-container {
-      margin-left: 80px;
-    }
-    .menu {
-      padding: 0;
-      margin: 44px 80px 0 0;
-      > li {
-        margin-left: 40px;
-      }
-    } 
-  } 
-  
-}
-
-@media screen and (max-width: $medium) {
-  .navigation .container {
-    .logo-container {
-      margin-left: 25px;
-    }
-    .menu {
-      padding: 0;
-      margin: 44px 20px 0 0;
-      > li {
-        margin-left: 25px;
-      }
     }
   }
 }
@@ -101,13 +63,21 @@
   .navigation {
     height: 50px;
     .container {
+      display: flex;
+      align-items: center;
       .logo-container {
+        display:flex;
         margin-left: 20px;
         margin-top: 15px;
         .nav-logo{
-          width: 174px;
-          height: 24px;
+          width: 131px;
+          height: 25px;
         }
+      }
+      .dropdown {
+        display: flex;
+        margin-top: 15px;
+        margin-right: 20px;
       }
       .menu {
         margin:0;
@@ -135,64 +105,6 @@
           &:hover {
             color:black;
           }
-        }
-      }
-      .dropdown {
-        display: flex;
-        margin-top: 15px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: $tiny) {
-  .navigation {
-    height: 50px;
-  }
-  .navigation .container {
-    display: flex;
-    align-items: center;
-    .logo-container {
-      margin-left: 20px;
-      margin-top: 15px;
-      .logo{
-        display:flex;
-      }
-      .nav-logo{
-        width: 131px;
-        height: 25px;
-      }
-    }
-    .dropdown {
-      display: flex;
-      margin-top: 15px;
-      margin-right: 20px;
-    }
-    .menu {
-      margin:0;
-      padding:0;
-      flex-direction: column;
-      height: auto;
-      display: flex;
-      position: fixed;
-      width: 120px;
-      left: calc(100% - 125px);
-      top: 45px;
-      background-color: $back-main;
-      border-radius: 3px;
-      box-shadow: 0 4px 8px -2px rgba(9,30,66,0.25),0 0 1px rgba(9,30,66,0.31);
-      > li{
-        margin: 0px;
-        padding: 8px;
-        &:hover{
-          background-color: $hover-main;
-        }
-      }
-      a {
-        text-decoration: none;
-        color:black;
-        &:hover {
-          color:black;
         }
       }
     }

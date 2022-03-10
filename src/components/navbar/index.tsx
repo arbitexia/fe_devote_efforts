@@ -7,12 +7,18 @@ function Navbar() {
   const [isToggled, setToggle] = useState(false)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const toggleMenu = useRef(null)
+  const toggleButton = useRef(null)
   useEffect(() => {
     const changeWidth = () => {
       setScreenWidth(window.innerWidth)
     }
     const globalClick = (e) => {
-      if (toggleMenu.current && toggleMenu.current.contains(e.target)) return
+      if (
+        toggleMenu.current &&
+        (toggleMenu.current.contains(e.target) ||
+          toggleButton.current === e.target)
+      )
+        return
       setToggle(false)
       document.removeEventListener('click', globalClick)
     }
@@ -21,7 +27,7 @@ function Navbar() {
     return () => {
       window.removeEventListener('resize', changeWidth)
     }
-  }, [isToggled, toggleMenu])
+  }, [isToggled, toggleMenu, toggleButton])
   return (
     <div className="navigation">
       <div className="container">
@@ -30,40 +36,42 @@ function Navbar() {
             <img src={weblogo} className="nav-logo" alt="logo" />
           </Link>
         </div>
-        <div
-          ref={(el) => {
-            toggleMenu.current = el
-          }}
-        >
-          {(isToggled || screenWidth > 768) && (
-            <ul className="menu">
-              <li>
-                <Link to="/aboutus">About Us</Link>
-              </li>
-              <li>
-                <Link to="/services">Services</Link>
-              </li>
-              <li>
-                <Link to="/technologies">Technologies</Link>
-              </li>
-              <li>
-                <Link to="/pricing">Pricing</Link>
-              </li>
-              <li>
-                <Link to="/contactus">Contact Us</Link>
-              </li>
-            </ul>
-          )}
-
-          <button
-            className="dropdown"
-            onClick={() => {
-              setToggle(!isToggled)
+        {(isToggled || screenWidth > 768) && (
+          <ul
+            className="menu"
+            ref={(el) => {
+              toggleMenu.current = el
             }}
           >
-            Menu
-          </button>
-        </div>
+            <li>
+              <Link to="/aboutus">About Us</Link>
+            </li>
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/technologies">Technologies</Link>
+            </li>
+            <li>
+              <Link to="/pricing">Pricing</Link>
+            </li>
+            <li>
+              <Link to="/contactus">Contact Us</Link>
+            </li>
+          </ul>
+        )}
+
+        <button
+          className="dropdown"
+          ref={(el) => {
+            toggleButton.current = el
+          }}
+          onClick={() => {
+            setToggle(!isToggled)
+          }}
+        >
+          Menu
+        </button>
       </div>
     </div>
   )
