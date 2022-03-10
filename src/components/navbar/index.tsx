@@ -30,13 +30,13 @@ function Navbar() {
   }, [isToggled, toggleMenu, toggleButton])
   return (
     <div className="navigation">
-      <div className="container">
+      <div className="container space-between h-align sw-v-align container-sw">
         <div className="logo-container">
           <Link className="logo" to="/">
             <img src={weblogo} className="nav-logo" alt="logo" />
           </Link>
         </div>
-        {(isToggled || screenWidth > 768) && (
+        {(isToggled || screenWidth > 911.99) && (
           <ul
             className="menu"
             ref={(el) => {

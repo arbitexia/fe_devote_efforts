@@ -1,0 +1,145 @@
+@import './config.scss';
+
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  background-color:#7C24F8;
+  box-shadow: none;
+  width:100%;
+  margin-top: auto;
+}
+a {
+  color: white;
+}
+
+.footer .container {
+  margin-top: 150px;
+}
+
+ul{
+  list-style: none;
+}
+
+.footer-leftbar{
+  float: left;
+  width: 58%;
+}
+
+.footer-rightbar{
+  float: right;
+  width: 37%;
+}
+
+.footer-leftbar-together{
+  font-weight: 500;
+  font-size: 62px;
+  line-height: 122.5%;
+  letter-spacing: -0.05em;
+  color: rgba(255, 255, 255, 0.6);
+
+}
+.footer-leftbar-connect{
+  font-weight: 500;
+  font-size: 62px;
+  line-height: 140%;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+}
+.footer-leftbar-email-box{
+  font-weight: 500;
+  font-size: 62px;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+.footer-leftbar-email-input{
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #FFF;
+  box-sizing: border-box;
+  color: white;
+  width: 209px;
+  height: 40px;
+  margin: 0 25px;
+}
+.footer-leftbar-email-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-leftbar-email-arrow{
+  font-family: monospace;
+}
+
+.footer-leftbar-email-arrow:hover{
+  cursor: pointer;
+  color: rgba(200, 200, 200, 0.8);
+}
+
+.ul-box {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 11px auto;
+  line-height: 29px;
+  /* or 181% */
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+li.footer-ul-header{
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #FFFFFF;
+
+}
+
+.footer-bottom{
+  margin-top:150px;
+  margin-bottom: 60px;
+  li {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (max-width: $medium) {
+  .footer .container {
+    text-align: center;
+  }
+  .footer-leftbar {
+    margin-bottom: 30px;
+  }
+  .sw-12 {
+    width: 100%;
+  }
+  .footer-leftbar-email-box {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: $small) {
+  .footer-top .footer-leftbar {
+    display: none;
+  }
+  .footer .container {
+    text-align: center;
+  }
+  .sw-12 {
+    width: 100%;
+  }
+}
