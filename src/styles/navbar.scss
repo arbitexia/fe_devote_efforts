@@ -1,0 +1,112 @@
+@import "./config.scss";
+
+.navigation {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: $back-main;
+  z-index: $navbar-index;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    .logo-container {
+      margin: auto;
+	    margin-top: 34px;
+      .nav-logo{
+        width: 197px;
+      }
+    }
+    .dropdown {
+      display: none;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 90%;
+      /* or 14px */
+      color: #5A368D;
+      align-items: center;
+      letter-spacing: -0.5px;
+      border: none;
+    }
+    
+    .menu {
+      margin: 0;
+      margin: auto;
+      margin-top: 44px;
+      padding: 0;
+      
+      list-style-type: none;
+      position: relative;
+      display: flex;
+      > li {
+        padding: 0 18px;
+        color: #f1f1f1;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 90%;
+        text-align: left;
+        letter-spacing: -0.5px;
+        > a {
+          text-decoration: none;
+          color:black;
+          &:hover {
+            color:#5A368D;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small) {
+  .navigation {
+    height: 50px;
+    .container {
+      display: flex;
+      align-items: center;
+      .logo-container {
+        display:flex;
+        margin-left: 20px;
+        margin-top: 15px;
+        .nav-logo{
+          width: 131px;
+          height: 25px;
+        }
+      }
+      .dropdown {
+        display: flex;
+        margin-top: 15px;
+        margin-right: 20px;
+      }
+      .menu {
+        margin:0;
+        padding:0;
+        flex-direction: column;
+        height: auto;
+        display: flex;
+        position: fixed;
+        width: 120px;
+        left: calc(100% - 125px);
+        top: 45px;
+        background-color: $back-main;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px -2px rgba(9,30,66,0.25),0 0 1px rgba(9,30,66,0.31);
+        > li{
+          margin: 0px;
+          padding: 8px;
+          &:hover{
+            background-color: $hover-main;
+          }
+        }
+        a {
+          text-decoration: none;
+          color:black;
+          &:hover {
+            color:black;
+          }
+        }
+      }
+    }
+  }
+}
