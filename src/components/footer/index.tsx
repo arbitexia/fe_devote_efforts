@@ -7,10 +7,11 @@ function Footer() {
     <footer className="footer">
       <div className="container container-sw h-align footer-top">
         <div className="footer-leftbar sw-12">
-          <div className="footer-leftbar-together">Let's work together.</div>
-          <div className="footer-leftbar-connect">Connect with</div>
-          <div className="footer-leftbar-email-box">
-            us.
+          <div className="footer-leftbar-together caption">
+            Let's work together.
+          </div>
+          <div className="footer-leftbar-connect caption">Connect with us.</div>
+          <div className="footer-leftbar-email-box caption">
             <input
               type="email"
               className="footer-leftbar-email-input"
@@ -79,7 +80,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="container h-align footer-bottom">
+      <div className="container container-sw h-align footer-bottom">
         <div className="footer-leftbar sw-12">
           <ul>
             <li>© 2022 Devote Effort. All right reserved</li>
@@ -87,18 +88,22 @@ function Footer() {
         </div>
         <div className="footer-rightbar sw-12">
           <ul>
-            <li>
-              <Link to="/">Terms of Use</Link>
-            </li>
-            <li>
-              <Link to="/">Sales and Refunds</Link>
-            </li>
-            <li>
-              <Link to="/">Cookie Policy</Link>
-            </li>
-            <li>
-              <Link to="/">Legal</Link>
-            </li>
+            <div>
+              <li>
+                <Link to="/">Terms of Use</Link>
+              </li>
+              <li>
+                <Link to="/">Cookie Policy</Link>
+              </li>
+            </div>
+            <div>
+              <li>
+                <Link to="/">Sales and Refunds</Link>
+              </li>
+              <li>
+                <Link to="/">Legal</Link>
+              </li>
+            </div>
           </ul>
         </div>
       </div>

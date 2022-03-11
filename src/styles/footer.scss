@@ -29,28 +29,27 @@ ul{
 .footer-rightbar{
   float: right;
   width: 37%;
+  display: flex;
 }
 
-.footer-leftbar-together{
+.caption {
   font-weight: 500;
   font-size: 62px;
   line-height: 122.5%;
   letter-spacing: -0.05em;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 1);
+}
 
+.footer-leftbar-together{
+  line-height: 122.5%;
+  color: rgba(255, 255, 255, 0.6);
 }
 .footer-leftbar-connect{
-  font-weight: 500;
-  font-size: 62px;
   line-height: 140%;
-  letter-spacing: -0.05em;
-  color: #FFFFFF;
+  display: flex;
+  align-items: bottom;
 }
 .footer-leftbar-email-box{
-  font-weight: 500;
-  font-size: 62px;
-  letter-spacing: -0.05em;
-  color: #FFFFFF;
   display: flex;
   align-items: center;
 }
@@ -61,12 +60,15 @@ ul{
   background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: 2px solid #FFF;
-  box-sizing: border-box;
+  //border-bottom: 2px solid #FFF;
+  box-shadow: -5px 10px 0px -7px #ebebeb, 0px 10px 0px -7px #ebebeb;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  box-sizing: border-box;   
   color: white;
   width: 209px;
   height: 40px;
-  margin: 0 25px;
+  margin-right: 25px;
 }
 .footer-leftbar-email-input::placeholder {
   color: rgba(255, 255, 255, 0.8);
@@ -105,7 +107,6 @@ li.footer-ul-header{
 }
 
 .footer-bottom{
-  margin-top:150px;
   margin-bottom: 60px;
   li {
     display: inline-block;
@@ -115,31 +116,62 @@ li.footer-ul-header{
     color: #FFFFFF;
     padding-right: 24px;
   }
+  ul{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1020px)
+{
+  .footer-bottom{
+    li {
+      padding-right: 0px;
+    }
+  }
 }
 
 @media screen and (max-width: $medium) {
   .footer .container {
-    text-align: center;
+    margin-top: 100px;
   }
-  .footer-leftbar {
-    margin-bottom: 30px;
+  .footer-bottom{
+    li {
+      padding-right: 24px;
+    }
+  }
+  .footer-top .footer-rightbar {
+    margin-top: 90px;
+  }
+  .footer-bottom .footer-rightbar {
+    margin-bottom: 34px;
   }
   .sw-12 {
     width: 100%;
   }
-  .footer-leftbar-email-box {
-    justify-content: center;
+  .caption {
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 122%;
+    /* or 56px */
+    letter-spacing: -0.04em;
+  }
+  .footer-bottom{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 32px;
+    .footer-leftbar {
+      order: 2;
+    }
+    .footer-rightbar {
+      order: 1;
+    }
   }
 }
 
-@media screen and (max-width: $small) {
-  .footer-top .footer-leftbar {
-    display: none;
-  }
-  .footer .container {
-    text-align: center;
-  }
-  .sw-12 {
-    width: 100%;
+@media screen and (max-width: 360px) {
+  .footer-bottom{
+    li {
+      padding-right: 0px;
+    }
   }
 }
