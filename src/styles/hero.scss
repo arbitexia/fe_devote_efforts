@@ -1,9 +1,6 @@
 @import './config.scss';
 
 .hero {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
   margin-top: 100px;
 }
 span,h2{
@@ -115,10 +112,13 @@ span,h2{
 }
 
 .hero-img {
+  margin: 0 auto;
   margin-top: 90px;
   background-image: url('../assets/images/smartworks.jpg');
   background-size: cover;
   background-position: center;
+  margin-left:50%;
+  transform: translate(-50%,0);
   width: 1200px;
   height: 506px;
 }
@@ -152,7 +152,7 @@ span,h2{
     margin-right: 37px;
   }
   .hero-img {
-    width: 1200px;
+    width: 948px;
     height: 400px;
   }
 }
