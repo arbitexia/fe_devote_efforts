@@ -25,12 +25,12 @@ span,h2{
 }
 
 .section-line::before {
-  height: 1px;
+  height: 3px;
   display: flex;
   position: relative;
   top: 0.7em;
   width: 30px;
-  background: #808080;
+  background: #65328D;
   /* border-right: 1px white; */
   content: '';
   left: -15px;

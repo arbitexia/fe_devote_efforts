@@ -11,7 +11,7 @@ function Hero() {
         <div className="hero-content">
           <div className="hero-caption">
             <span className="section-line">
-              "We make great ideas come to life."
+              “We make great ideas come to life.”
             </span>
             <h2>
               An extra mile for your <span className="business">business</span>
