@@ -7,12 +7,15 @@
   height: 80px;
   background-color: $back-main;
   z-index: $navbar-index;
-  .container{
+  display: flex;
+  justify-content: center;
+  .container{    
+    width: 84%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
     .logo-container {
-      margin: auto;
-	    margin-top: 34px;
       .nav-logo{
         width: 197px;
       }
@@ -31,8 +34,6 @@
     
     .menu {
       margin: 0;
-      margin: auto;
-      margin-top: 44px;
       padding: 0;
       
       list-style-type: none;

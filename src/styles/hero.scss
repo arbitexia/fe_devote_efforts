@@ -1,0 +1,58 @@
+.section-line {
+  font-family: Work Sans;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 143%;
+  /* or 31px */
+
+  letter-spacing: -0.025em;
+
+  color: #202020;
+}
+.hero-caption h2{
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -5px;
+
+  color: #000000;
+  .business {
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -5px;
+    color: #5a368d;
+  }
+}
+.hero-description {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 160%;
+  /* or 32px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  color: rgba(25, 42, 89, 0.7);
+}
+button {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 90%;
+  /* identical to box height, or 18px */
+
+  display: flex;
+  align-items: center;
+
+  color: #7C24F8;
+
+  text-shadow: 0px 1px 10px rgba(90, 54, 141, 0.2);
+}
