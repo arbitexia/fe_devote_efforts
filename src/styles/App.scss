@@ -102,6 +102,8 @@ button {
 @media screen and (max-width: $medium) {
   .container-sw {
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .sw-v-align{
     display: flex;
