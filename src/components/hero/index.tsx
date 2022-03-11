@@ -13,8 +13,7 @@ function Hero() {
               "We make great ideas come to life."
             </span>
             <h2>
-              An extra mile for your&nbsp;
-              <span className="business">business</span>
+              An extra mile for your <span className="business">business</span>
             </h2>
           </div>
           <div className="hero-description">
@@ -46,9 +45,9 @@ function Hero() {
             <button className="pricing">Pricing</button>
             <button className="about">About Us</button>
           </div>
-          <div className="hero-img">
-            <img src={smartworks} />
-          </div>
+        </div>
+        <div className="hero-img">
+          <img src={smartworks} />
         </div>
       </div>
     </section>
