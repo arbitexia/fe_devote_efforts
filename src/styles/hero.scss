@@ -3,6 +3,7 @@
 .hero {
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
   margin-top: 100px;
 }
 span,h2{
@@ -87,7 +88,7 @@ span,h2{
   /* identical to box height, or 18px */
   display: flex;
   align-items: center;
-  
+
   background-color: transparent;
   border: none;
   color: #7C24F8;
@@ -96,6 +97,13 @@ span,h2{
   :hover {
     cursor: pointer;
   }
+}
+
+.hero-social-links {
+  display:flex;
+  flex-direction: column;
+  transform: translateY(-85%);
+  position: absolute;
 }
 
 .hero-features button::before {
@@ -108,9 +116,11 @@ span,h2{
 
 .hero-img {
   margin-top: 90px;
-  > img {
-    width:100%;
-  }
+  background-image: url('../assets/images/smartworks.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 1200px;
+  height: 506px;
 }
 
 @media screen and (max-width: $small) {
@@ -131,11 +141,20 @@ span,h2{
       font-size: 62px;
     }
   }
+  .hero-social-links {
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+  }
   .hero-description{
     margin-top:70px;
     width: 100%;
   }
   .hero-features button:first-child{
     margin-right: 37px;
+  }
+  .hero-img {
+    width: 1200px;
+    height: 400px;
   }
 }

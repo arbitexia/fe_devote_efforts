@@ -1,12 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import smartworks from '../../assets/images/smartworks.png'
 import '../../styles/hero.scss'
+import iconInstagram from '../../assets/images/Instagram.svg'
+import iconTwitter from '../../assets/images/Twitter.svg'
+import iconYoutube from '../../assets/images/Youtube.svg'
 
 function Hero() {
   return (
     <section className="hero">
-      <div className="container">
+      <div className="container container-sw">
         <div className="hero-content">
           <div className="hero-caption">
             <span className="section-line">
@@ -22,34 +23,32 @@ function Hero() {
             launching a product
           </div>
           <div className="hero-social-links">
-            <Link
-              to="http://instagram.com/devoteeffort"
+            <a
+              href="http://instagram.com/devoteeffort"
               className="generic-anchor"
             >
-              <i className="fa fa-instagram"></i>
-            </Link>
-            <Link
-              to="http://instagram.com/devoteeffort"
+              <img src={iconInstagram} />
+            </a>
+            <a
+              href="http://twitter.com/devoteeffort"
               className="generic-anchor"
             >
-              <i className="fa fa-instagram"></i>
-            </Link>
-            <Link
-              to="http://instagram.com/devoteeffort"
+              <img src={iconTwitter} />
+            </a>
+            <a
+              href="http://youtube.com/devoteeffort"
               className="generic-anchor"
             >
-              <i className="fa fa-instagram"></i>
-            </Link>
+              <img src={iconYoutube} />
+            </a>
           </div>
           <div className="hero-features">
             <button className="pricing">Pricing</button>
             <button className="about">About Us</button>
           </div>
         </div>
-        <div className="hero-img">
-          <img src={smartworks} />
-        </div>
       </div>
+      <div className="hero-img"></div>
     </section>
   )
 }
