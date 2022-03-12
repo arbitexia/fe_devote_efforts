@@ -1,0 +1,36 @@
+@import './config.scss';
+
+.service-card {
+  width: 25%;
+  .icon {
+    width: 55px;
+    height: 55px;
+  }
+  .card-title {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 130%;
+    /* or 49px */
+    letter-spacing: -1px;
+  }
+  .design {
+    color: #7C24F8;
+  }
+  .other {
+    color: #B8B8B8;
+  }
+  .card-description {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: -0.015em;
+  }
+}
+
+@media screen and (max-width:$small) {
+  .service-card {
+    width:100%;
+  }
+}
