@@ -1,0 +1,94 @@
+@import './config.scss';
+
+.services {
+  margin-top: 110px;
+  background-color: black;
+  color: white;
+  .services-content{
+    padding: 140px 12.5% 200px 12.5%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .caption {
+    width: 60%;
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+  }
+  .description {
+    width: 30%;
+    margin-left: 10%;
+    .service-title {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 143%;
+      letter-spacing: -0.025em;
+      color: #7C24F8;
+      margin-left: 45px
+    }
+    .service-title::before {
+      height: 3px;
+      display: flex;
+      position: relative;
+      top: 0.8em;
+      width: 30px;
+      background: #7C24F8;
+      /* border-right: 1px white; */
+      content: '';
+      left: -45px;
+      /* border-right: 1px white; */
+    }
+    .service-description{
+      margin-top:30px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      /* or 29px */
+      letter-spacing: -0.015em;
+
+      color: #E6E6E6;
+    }
+  }
+  .service-cards{
+    display:flex;
+    justify-content: space-between;
+    margin-top:160px;
+  }
+
+}
+
+@media screen and (max-width: $small) {
+  .services .services-content{
+    padding:0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .caption {
+      padding-top: 70px;
+      width: 100%;
+      font-weight: 500;
+      font-size: 46px;
+      line-height: 122%;
+      letter-spacing: -0.03em;;
+      order: 2;
+    }
+    .description{
+      margin-left: 0;
+      width: 100%;
+      order: 1;
+      .service-description {
+        margin-top: 20px;
+      }
+    }
+    .service-cards{
+      display: block;
+      order:3;
+      margin-top: 0;
+      .service-card {
+        margin-top: 80px;
+      }
+    }
+  }
+}
