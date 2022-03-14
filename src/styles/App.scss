@@ -10,8 +10,13 @@
   font-style: normal;
 }
 
+.App {
+  background-color: $back-main;
+}
+
 .container {
   width: 84%;
+  max-width: 1200px;
   margin:0 auto;
 }
 
