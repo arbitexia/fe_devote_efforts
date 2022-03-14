@@ -22,7 +22,7 @@ const projects = [
   {
     image: project3,
     url: '',
-    title: 'Nft App Design',
+    title: 'NFT App Design',
     description: 'Website, Nft, Design',
   },
   {
