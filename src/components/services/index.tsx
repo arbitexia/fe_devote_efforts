@@ -5,24 +5,24 @@ import devIcon from '../../assets/images/development_icon.svg'
 import seoIcon from '../../assets/images/seo_icon.svg'
 import '../../styles/services.scss'
 
-const cards = {
-  0: {
+const cards = [
+  {
     icon: designIcon,
     title: 'Design',
     description: 'Logo revamps, updated branding, creating digital assets',
   },
-  1: {
+  {
     icon: devIcon,
     title: 'Development',
     description:
       'Website revamps, app building, platform migration, setting up tracking & analytics',
   },
-  2: {
+  {
     icon: seoIcon,
     title: 'SEO',
     description: 'Website revamps, app building, platform migration, setting',
   },
-}
+]
 
 function Services() {
   return (
@@ -38,13 +38,12 @@ function Services() {
             </div>
           </div>
           <div className="service-cards">
-            {Object.keys(cards).map((keyName, i) => {
+            {cards.map((card) => {
               return (
                 <ServiceCard
-                  key={i}
-                  icon={cards[keyName].icon}
-                  title={cards[keyName].title}
-                  description={cards[keyName].description}
+                  icon={card.icon}
+                  title={card.title}
+                  description={card.description}
                 />
               )
             })}
