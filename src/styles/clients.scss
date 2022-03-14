@@ -6,6 +6,7 @@
 }
 
 .clients-content{
+  margin-top: 100px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -15,5 +16,11 @@
     img {
       filter: grayscale(100%);
     }
+  }
+}
+
+@media screen and (max-width: $small) {
+  .clients-content {
+    margin-top: 40px;
   }
 }
