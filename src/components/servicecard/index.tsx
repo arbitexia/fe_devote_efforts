@@ -1,20 +1,20 @@
 import React from 'react'
-import '../../styles/servicecard.scss'
+import '../../styles/service_card.scss'
 
-function ServiceCard(props) {
+function ServiceCard({ icon, title, description }) {
   return (
     <div className="service-card">
-      <div className={'card-icon'}>
-        <img src={props.icon} />
+      <div className="card-icon">
+        <img src={icon} />
       </div>
       <div
         className={
-          props.title === 'Design' ? 'card-title design' : 'card-title other'
+          title === 'Design' ? 'card-title design' : 'card-title other'
         }
       >
-        {props.title}
+        {title}
       </div>
-      <div className="card-description other">{props.description}</div>
+      <div className="card-description other">{description}</div>
     </div>
   )
 }

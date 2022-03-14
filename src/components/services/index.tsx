@@ -38,9 +38,10 @@ function Services() {
             </div>
           </div>
           <div className="service-cards">
-            {cards.map((card) => {
+            {cards.map((card, i) => {
               return (
                 <ServiceCard
+                  key={i}
                   icon={card.icon}
                   title={card.title}
                   description={card.description}
