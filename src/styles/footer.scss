@@ -2,12 +2,12 @@
 
 .footer {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   background-color:#7C24F8;
   box-shadow: none;
   width:100%;
-  margin-top: 190px;
+  margin-top: auto;
 }
 a {
   color: white;
@@ -131,9 +131,6 @@ li.footer-ul-header{
 }
 
 @media screen and (max-width: $medium) {
-  .footer {
-    margin-top: 160px;
-  }
   .footer .container {
     margin-top: 100px;
   }

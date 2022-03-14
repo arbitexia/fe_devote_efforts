@@ -1,0 +1,26 @@
+@import './config.scss';
+
+.clients {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-content{
+  margin-top: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  a{
+    margin: 25px 15px;
+    img {
+      filter: grayscale(100%);
+    }
+  }
+}
+
+@media screen and (max-width: $small) {
+  .clients-content {
+    margin-top: 40px;
+  }
+}
