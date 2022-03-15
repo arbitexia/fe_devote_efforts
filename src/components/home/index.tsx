@@ -5,6 +5,7 @@ import Hero from '../hero'
 import About from '../about'
 import OurProject from '../ourprojects'
 import Technologies from '../technologies'
+import OurClients from '../ourclients'
 
 function HomeContainer() {
   return (
@@ -15,6 +16,7 @@ function HomeContainer() {
       <OurProject />
       <Technologies />
       <About />
+      <OurClients />
     </main>
   )
 }
