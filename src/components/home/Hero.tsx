@@ -1,15 +1,15 @@
 import React from 'react'
-import '../../../styles/home/hero.scss'
-import iconInstagram from '../../../assets/images/Instagram.svg'
-import iconTwitter from '../../../assets/images/Twitter.svg'
-import iconYoutube from '../../../assets/images/Youtube.svg'
+import '../../styles/home/hero.scss'
+import iconInstagram from '../../assets/images/Instagram.svg'
+import iconTwitter from '../../assets/images/Twitter.svg'
+import iconYoutube from '../../assets/images/Youtube.svg'
 
 function Hero() {
   return (
     <section className="hero">
       <div className="container">
         <div className="grid-layout">
-          <div className="hero-caption wgs-2 wge-7 swgs-1 wg">
+          <div className="hero-caption wgs-2 wge-7 swg wg">
             <span className="section-line">
               “We make great ideas come to life.”
             </span>
@@ -39,13 +39,13 @@ function Hero() {
               <img src={iconYoutube} />
             </a>
           </div>
-          <div className="hero-description wgs-5 wge-8 swgs-1 wg">
+          <div className="hero-description wgs-5 wge-8 swg wg">
             We’ve been delivering commercially successful products for nearly a
             decade and we are aware of the importance not only of making but of
             launching a product
           </div>
 
-          <div className="hero-features  wgs-5 wge-8 swgs-1 wg">
+          <div className="hero-features  wgs-5 wge-8 swg wg">
             <button className="pricing btn-arrow">Pricing</button>
             <button className="about btn-arrow">About Us</button>
           </div>

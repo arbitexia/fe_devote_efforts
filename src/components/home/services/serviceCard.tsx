@@ -1,7 +1,8 @@
 import React from 'react'
 import '../../../styles/home/service_card.scss'
+import { ServiceCardItem } from './serviceCardItem'
 
-function ServiceCard({ icon, title, description }) {
+function ServiceCard({ icon, title, description }: ServiceCardItem) {
   return (
     <div className="service-card">
       <div className="card-icon">

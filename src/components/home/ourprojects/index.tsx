@@ -1,43 +1,7 @@
 import React from 'react'
-import project1 from '../../../assets/images/project-1.png'
-import project2 from '../../../assets/images/project-2.png'
-import project3 from '../../../assets/images/project-3.png'
-import project4 from '../../../assets/images/project-4.png'
 import Gallery from './gallery'
 import '../../../styles/home/ourproject.scss'
-
-const projects = [
-  {
-    image: project1,
-    url: '',
-    title: 'Chakra',
-    description: 'Website, Development',
-  },
-  {
-    image: project2,
-    url: '',
-    title: 'Goldie',
-    description: 'Website, Development',
-  },
-  {
-    image: project3,
-    url: '',
-    title: 'NFT App Design',
-    description: 'Website, Nft, Design',
-  },
-  {
-    image: project4,
-    url: '',
-    title: 'Petronas Tower',
-    description: 'Website, Development',
-  },
-  {
-    image: project1,
-    url: '',
-    title: 'Chakra',
-    description: 'Website, Development',
-  },
-]
+import GalleryItem from './galleryItem'
 
 function OurProject() {
   return (
@@ -57,8 +21,16 @@ function OurProject() {
           </div>
         </div>
         <div className="gallery grid-layout">
-          {projects.map((project) => {
-            return <Gallery item={project} />
+          {GalleryItem.map((project, i) => {
+            return (
+              <Gallery
+                key={i}
+                image={project.image}
+                url={project.url}
+                title={project.title}
+                description={project.description}
+              />
+            )
           })}
           <div className="gallery-desc row-wrap wgs-5 wge-9 swgs-1 wg">
             <div className="v-align">

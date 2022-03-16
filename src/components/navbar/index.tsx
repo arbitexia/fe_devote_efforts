@@ -30,7 +30,7 @@ function Navbar() {
   }, [isToggled, toggleMenu, toggleButton])
   return (
     <div className="navigation">
-      <div className="container space-between h-align sw-v-align container-sw">
+      <div className="container space-between h-align sw-v-align">
         <div className="logo-container">
           <Link className="logo" to="/">
             <img src={weblogo} className="nav-logo" alt="logo" />

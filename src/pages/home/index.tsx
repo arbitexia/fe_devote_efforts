@@ -1,12 +1,15 @@
 import React from 'react'
-import Services from '../../components/home/services'
-import Clients from '../../components/home/clients'
-import Hero from '../../components/home/hero'
-import About from '../../components/home/about'
-import OurProject from '../../components/home/ourprojects'
-import Technologies from '../../components/home/technologies'
-import OurClients from '../../components/home/ourclients'
-import SuccessfulStory from '../../components/home/successfulstory'
+
+import {
+  Services,
+  Clients,
+  Hero,
+  About,
+  OurProject,
+  Technologies,
+  OurClients,
+  SuccessfulStory,
+} from '../../components/home'
 
 function HomeContainer() {
   return (

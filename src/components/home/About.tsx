@@ -1,12 +1,12 @@
 import React from 'react'
-import img1 from '../../../assets/images/about_img1.jpg'
-import img2 from '../../../assets/images/about_img2.jpg'
-import '../../../styles/home/about.scss'
+import img1 from '../../assets/images/about_img1.jpg'
+import img2 from '../../assets/images/about_img2.jpg'
+import '../../styles/home/about.scss'
 
 function About() {
   return (
     <div className="about">
-      <div className="container container-sw">
+      <div className="container ">
         <div className="capt">
           We are a team of creators, doers and problem solvers.
         </div>

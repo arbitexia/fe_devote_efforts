@@ -1,6 +1,6 @@
 import React from 'react'
-import avatar from '../../../assets/images/avatar.jpg'
-import '../../../styles/home/ourclients.scss'
+import avatar from '../../assets/images/avatar.jpg'
+import '../../styles/home/ourclients.scss'
 
 function OurClients() {
   return (
@@ -14,7 +14,7 @@ function OurClients() {
               about working with us.
             </div>
           </div>
-          <div className="capt wgs-5 wge-9 swgs-1 swge-8 wg">
+          <div className="capt wgs-5 wge-9 swg swge-8 wg">
             Our clients speak
           </div>
         </div>
@@ -22,7 +22,7 @@ function OurClients() {
           <div className="avatar wgs-1 wge-4 wg swge-8">
             <img src={avatar} />
           </div>
-          <div className="content  wgs-5 wge-8 swgs-1 swge-8 wg">
+          <div className="content  wgs-5 wge-8 swg swge-8 wg">
             <div className="desc">
               <span>“</span>Devote Effort did such a fab job on the campaign
               site for our Fall-Winter 2021 Wedding Collection, we can't wait to

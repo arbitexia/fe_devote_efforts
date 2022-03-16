@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../../styles/home/gallery.scss'
+import { GalleryItem } from './galleryItem'
 
-function Gallery({ item }) {
+function Gallery({ image, url, title, description }: GalleryItem) {
   return (
     <div
       className="clipped swgs-1"
-      style={{ backgroundImage: `url(${item.image})` }}
+      style={{ backgroundImage: `url(${image})` }}
     >
-      <Link to={item.url}>
+      <Link to={url}>
         <div className="mask">
-          <div className="title">{item.title}</div>
-          <div className="desc">{item.description}</div>
+          <div className="title">{title}</div>
+          <div className="desc">{description}</div>
         </div>
       </Link>
     </div>
