@@ -1,4 +1,4 @@
-@import './config.scss';
+@import '../config.scss';
 .ourclients {
   background: rgba(25, 42, 89, 0.15);
   padding-top: 150px;
@@ -14,7 +14,6 @@
   .ourclients-top {
     margin-bottom: 60px;
     .testimonial {
-      grid-column: span 3;
       .title {
         display: flex;
         font-style: italic;
@@ -55,7 +54,6 @@
       }
     }
     .capt {
-      grid-column: 5 / span 4;
       font-weight: 500;
       font-size: 62px;
       line-height: 110%;
@@ -69,12 +67,7 @@
     }
   }
   .ourclients-bottom{
-    .avatar {
-      grid-column: span 3;
-      grid-row: span 1;
-    }
     .content {
-      grid-column: 5 / span 3;
       .desc {
         font-style: italic;
         font-weight: 500;
@@ -204,17 +197,12 @@
   }
   .ourclients .ourclients-top {
     margin-bottom: 50px;
-    .testimonial{
-      grid-column: span 8;
-    }
     .capt{
       margin-top: 40px;
-      grid-column: span 8;
     } 
   }
   .ourclients .ourclients-bottom {
     .content {
-      grid-column: span 8;
       .client .avatar {
         display: block;
       }

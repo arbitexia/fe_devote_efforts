@@ -1,4 +1,4 @@
-@import './config.scss';
+@import '../config.scss';
 
 .technologies {
   padding-top: 135px;
@@ -60,18 +60,18 @@
     .capt {
       font-size: 46px;
     }
-  }
-  .technologies-content {
-    margin-top: 40px;
-    a {
-      width: 50%;
-      height: 60px;
-      &:nth-child(3){order:4;}
-      &:nth-child(4){order:3;}
-      &:nth-child(7){order:8;}
-      &:nth-child(8){order:7;}
-      img {
-        height: 100%;
+    .technologies-content {
+      margin-top: 40px;
+      a {
+        width: 50%;
+        height: 60px;
+        &:nth-child(3){order:4;}
+        &:nth-child(4){order:3;}
+        &:nth-child(7){order:8;}
+        &:nth-child(8){order:7;}
+        img {
+          height: 100%;
+        }
       }
     }
   }

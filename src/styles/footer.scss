@@ -131,7 +131,7 @@ li.footer-ul-header{
 
 @media screen and (max-width: $medium) {
   .footer .container {
-    margin-top: 100px;
+    padding-top: 100px;
   }
   .footer-bottom{
     li {
@@ -159,11 +159,12 @@ li.footer-ul-header{
     flex-flow: row wrap;
     margin-bottom: 32px;
     .footer-leftbar {
+      text-align: center;
       order: 2;
     }
     .footer-rightbar {
       order: 1;
-    }
+    }   
   }
 }
 

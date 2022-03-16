@@ -1,7 +1,7 @@
 import React from 'react'
-import img1 from '../../assets/images/about_img1.jpg'
-import img2 from '../../assets/images/about_img2.jpg'
-import '../../styles/about.scss'
+import img1 from '../../../assets/images/about_img1.jpg'
+import img2 from '../../../assets/images/about_img2.jpg'
+import '../../../styles/home/about.scss'
 
 function About() {
   return (
@@ -26,7 +26,7 @@ function About() {
           <div className="panel-img-bottom">
             <img className="image" src={img2} />
           </div>
-          <div className="panel-desc-bottom">
+          <div className="panel-desc-bottom row-wrap">
             <div className="desc">
               So you get the deep knowledge that comes with experience at places
               like Apple and Netflix, but a flat structure so the knowledge can

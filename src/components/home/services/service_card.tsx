@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/service_card.scss'
+import '../../../styles/home/service_card.scss'
 
 function ServiceCard({ icon, title, description }) {
   return (
@@ -7,13 +7,7 @@ function ServiceCard({ icon, title, description }) {
       <div className="card-icon">
         <img src={icon} />
       </div>
-      <div
-        className={
-          title === 'Design' ? 'card-title design' : 'card-title other'
-        }
-      >
-        {title}
-      </div>
+      <div className="card-title">{title}</div>
       <div className="card-description other">{description}</div>
     </div>
   )

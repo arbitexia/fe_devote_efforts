@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/success.scss'
+import '../../../styles/home/success.scss'
 
 function SuccessfulStory() {
   return (
@@ -19,7 +19,7 @@ function SuccessfulStory() {
             </div>
           </div>
         </div>
-        <div className="stories">
+        <div className="stories row-wrap space-around">
           <div className="story">
             <div className="eval">7+</div>
             <div className="title">Years of Experience</div>

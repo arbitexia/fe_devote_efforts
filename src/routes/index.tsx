@@ -1,5 +1,5 @@
 import { Switch } from 'react-router-dom'
-import HomeContainer from '../components/home'
+import HomeContainer from '../pages/home'
 import { BasicLayout } from '../layout'
 import PublicRoute from './public-route'
 
