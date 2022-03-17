@@ -5,7 +5,7 @@ import ServiceCardItems from './serviceCardItem'
 
 function Services() {
   return (
-    <div className="services">
+    <div className="services" id="services">
       <div className="container container-sw">
         <div className="grid-layout">
           <div className="caption wgs-2 wge-6 swgs-1 wg">

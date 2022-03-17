@@ -44,19 +44,19 @@ function Navbar() {
             }}
           >
             <li>
-              <Link to="/aboutus">About Us</Link>
+              <Link to="#about-us">About Us</Link>
             </li>
             <li>
-              <Link to="/services">Services</Link>
+              <Link to="#services">Services</Link>
             </li>
             <li>
-              <Link to="/technologies">Technologies</Link>
+              <Link to="#technologies">Technologies</Link>
             </li>
             <li>
-              <Link to="/pricing">Pricing</Link>
+              <Link to="#pricing">Pricing</Link>
             </li>
             <li>
-              <Link to="/contactus">Contact Us</Link>
+              <Link to="#contact-us">Contact Us</Link>
             </li>
           </ul>
         )}

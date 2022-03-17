@@ -4,7 +4,7 @@ import '../../styles/footer.scss'
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact-us">
       <div className="container  h-align footer-top">
         <div className="footer-leftbar sw-12">
           <div className="footer-leftbar-together caption">

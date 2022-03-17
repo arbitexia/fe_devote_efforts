@@ -5,7 +5,7 @@ import '../../styles/home/about.scss'
 
 function About() {
   return (
-    <div className="about">
+    <div className="about" id="about-us">
       <div className="container ">
         <div className="capt">
           We are a team of creators, doers and problem solvers.
