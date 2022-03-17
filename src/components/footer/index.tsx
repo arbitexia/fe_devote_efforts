@@ -5,7 +5,7 @@ import '../../styles/footer.scss'
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container container-sw h-align footer-top">
+      <div className="container  h-align footer-top">
         <div className="footer-leftbar sw-12">
           <div className="footer-leftbar-together caption">
             Let's work together.
@@ -80,7 +80,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="container container-sw h-align footer-bottom">
+      <div className="container  h-align footer-bottom">
         <div className="footer-leftbar sw-12">
           <ul>
             <li>© 2022 Devote Effort. All right reserved</li>

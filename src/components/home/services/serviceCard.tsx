@@ -1,19 +1,14 @@
 import React from 'react'
-import '../../styles/service_card.scss'
+import '../../../styles/home/service_card.scss'
+import { ServiceCardItem } from './serviceCardItem'
 
-function ServiceCard({ icon, title, description }) {
+function ServiceCard({ icon, title, description }: ServiceCardItem) {
   return (
     <div className="service-card">
       <div className="card-icon">
         <img src={icon} />
       </div>
-      <div
-        className={
-          title === 'Design' ? 'card-title design' : 'card-title other'
-        }
-      >
-        {title}
-      </div>
+      <div className="card-title">{title}</div>
       <div className="card-description other">{description}</div>
     </div>
   )

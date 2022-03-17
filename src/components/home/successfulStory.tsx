@@ -1,10 +1,10 @@
 import React from 'react'
-import '../../styles/success.scss'
+import '../../styles/home/success.scss'
 
 function SuccessfulStory() {
   return (
     <div className="success">
-      <div className="container container-sw">
+      <div className="container ">
         <div className="row">
           <div className="success-left">
             <div className="why">Why us</div>
@@ -19,7 +19,7 @@ function SuccessfulStory() {
             </div>
           </div>
         </div>
-        <div className="stories">
+        <div className="stories row-wrap space-around">
           <div className="story">
             <div className="eval">7+</div>
             <div className="title">Years of Experience</div>

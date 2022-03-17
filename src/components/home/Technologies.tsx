@@ -7,41 +7,64 @@ import iconNode from '../../assets/images/node_icon.svg'
 import iconGoogle from '../../assets/images/google_icon.svg'
 import iconAws from '../../assets/images/aws_icon.svg'
 import iconRails from '../../assets/images/rails_icon.svg'
-import '../../styles/technologies.scss'
+import '../../styles/home/technologies.scss'
+
+interface TechnologyItem {
+  url: string
+  image: string
+}
+
+const techList: TechnologyItem[] = [
+  {
+    url: '/',
+    image: iconVue,
+  },
+  {
+    url: '/',
+    image: iconReact,
+  },
+  {
+    url: '/',
+    image: iconAngular,
+  },
+  {
+    url: '/',
+    image: iconDjango,
+  },
+  {
+    url: '/',
+    image: iconNode,
+  },
+  {
+    url: '/',
+    image: iconGoogle,
+  },
+  {
+    url: '/',
+    image: iconAws,
+  },
+  {
+    url: '/',
+    image: iconRails,
+  },
+]
 
 function Technologies() {
   return (
     <div className="technologies">
-      <div className="container container-sw">
+      <div className="container">
         <div className="capt">Technologies</div>
         <div className="desc">
           We will find the best solution for you, let’s cooperate with us
         </div>
         <div className="technologies-content">
-          <a href="/">
-            <img src={iconVue} />
-          </a>
-          <a href="/">
-            <img src={iconReact} />
-          </a>
-          <a href="/">
-            <img src={iconAngular} />
-          </a>
-          <a href="/">
-            <img src={iconDjango} />
-          </a>
-          <a href="/">
-            <img src={iconNode} />
-          </a>
-          <a href="/">
-            <img src={iconGoogle} />
-          </a>
-          <a href="/">
-            <img src={iconAws} />
-          </a>
-          <a href="/">
-            <img src={iconRails} />
-          </a>
+          {techList.map((item, i) => {
+            return (
+              <a href={item.url} key={i}>
+                <img src={item.image} />
+              </a>
+            )
+          })}
         </div>
       </div>
     </div>

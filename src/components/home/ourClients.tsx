@@ -1,26 +1,28 @@
 import React from 'react'
 import avatar from '../../assets/images/avatar.jpg'
-import '../../styles/ourclients.scss'
+import '../../styles/home/ourclients.scss'
 
 function OurClients() {
   return (
     <div className="ourclients">
-      <div className="container container-sw">
-        <div className="ourclients-top row">
-          <div className="testimonial">
+      <div className="container">
+        <div className="ourclients-top grid-layout">
+          <div className="testimonial wgs-1 wge-4 swge-8 wg">
             <div className="title">Testimonial</div>
             <div className="desc">
               Don't just trust our word! See what a recent partner has to say
               about working with us.
             </div>
           </div>
-          <div className="capt">Our clients speak</div>
+          <div className="capt wgs-5 wge-9 swg swge-8 wg">
+            Our clients speak
+          </div>
         </div>
-        <div className="ourclients-bottom row">
-          <div className="avatar">
+        <div className="ourclients-bottom grid-layout">
+          <div className="avatar wgs-1 wge-4 wg swge-8">
             <img src={avatar} />
           </div>
-          <div className="content">
+          <div className="content  wgs-5 wge-8 swg swge-8 wg">
             <div className="desc">
               <span>“</span>Devote Effort did such a fab job on the campaign
               site for our Fall-Winter 2021 Wedding Collection, we can't wait to
