@@ -1,24 +1,8 @@
-import React from 'react'
-import Services from '../services'
-import Clients from '../clients'
-import Hero from '../hero'
-import About from '../about'
-import OurProject from '../ourprojects'
-import Technologies from '../technologies'
-import OurClients from '../ourclients'
-
-function HomeContainer() {
-  return (
-    <main>
-      <Hero />
-      <Clients />
-      <Services />
-      <OurProject />
-      <Technologies />
-      <About />
-      <OurClients />
-    </main>
-  )
-}
-
-export default HomeContainer
+export { default as About } from './About'
+export { default as Clients } from './Clients'
+export { default as Hero } from './Hero'
+export { default as OurClients } from './ourClients'
+export { default as OurProject } from './ourProjects'
+export { default as Services } from './Services'
+export { default as SuccessfulStory } from './successfulStory'
+export { default as Technologies } from './Technologies'
