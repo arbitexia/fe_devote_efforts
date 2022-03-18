@@ -38,6 +38,7 @@
         &:hover {
           filter: none;
         }
+        transition: all 1s;
       }
       &:nth-child(1){order:1;}
       &:nth-child(2){order:2;}

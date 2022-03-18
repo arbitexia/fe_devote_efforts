@@ -32,15 +32,21 @@ $secondColor: #7C24F8;
   line-height: 90%;
   color: $secondColor;
   @include text-shadow(0, 1, 10, rgba(90,56,141,.2));
+  transition: all .3s;
   &::before {
     content: "\2192";
     margin-right: 15px;
     font-family: monospace;
     font-size: 40px;
     margin-top: -2px;
+    transition: all .5s;
   }
   &:hover {
     cursor: pointer;
+    transform: translateX(20px);
+    &::before {
+      transform: translateX(10px);
+    }
   }
 }
 

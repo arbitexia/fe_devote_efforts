@@ -10,11 +10,17 @@ import {
   OurClients,
   SuccessfulStory,
 } from '../../components/home'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 
 function HomeContainer() {
+  console.log('HomePage')
+  gsap.registerPlugin(ScrollTrigger)
+  const timeline = gsap.timeline({})
+
   return (
     <main>
-      <Hero />
+      <Hero timeline={timeline} />
       <Clients />
       <Services />
       <OurProject />

@@ -6,7 +6,10 @@
   span,h2{
     margin:0;
   }
-  
+  .generic-anchor {
+    width: 40px;
+    height: 40px;
+  }
   .section-line {
     margin-left: 12.5%;
     @include caption;

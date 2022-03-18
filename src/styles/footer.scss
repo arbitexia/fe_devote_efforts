@@ -93,6 +93,10 @@ ul{
 
   mix-blend-mode: normal;
   opacity: 0.75;
+  transition: all .2s;
+  &:hover {
+    opacity: 1;
+  }
 }
 li.footer-ul-header{
   display: block;

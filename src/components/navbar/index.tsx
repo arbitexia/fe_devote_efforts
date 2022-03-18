@@ -33,7 +33,7 @@ function Navbar() {
       <div className="container space-between h-align sw-v-align">
         <div className="logo-container">
           <Link className="logo" to="/">
-            <img src={weblogo} className="nav-logo" alt="logo" />
+            <img src={weblogo} className="nav-logo anchor" alt="logo" />
           </Link>
         </div>
         {(isToggled || screenWidth > 911.99) && (
@@ -44,19 +44,29 @@ function Navbar() {
             }}
           >
             <li>
-              <Link to="#about-us">About Us</Link>
+              <Link className="anchor" to="/aboutus">
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="#services">Services</Link>
+              <Link className="anchor" to="/services">
+                Services
+              </Link>
             </li>
             <li>
-              <Link to="#technologies">Technologies</Link>
+              <Link className="anchor" to="/technologies">
+                Technologies
+              </Link>
             </li>
             <li>
-              <Link to="#pricing">Pricing</Link>
+              <Link className="anchor" to="/pricing">
+                Pricing
+              </Link>
             </li>
             <li>
-              <Link to="#contact-us">Contact Us</Link>
+              <Link className="anchor" to="/contactus">
+                Contact Us
+              </Link>
             </li>
           </ul>
         )}

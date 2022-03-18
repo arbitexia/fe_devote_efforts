@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../styles/home/service_card.scss'
+import '../../../styles/home/serviceCard.scss'
 import { ServiceCardItem } from './serviceCardItem'
 
 function ServiceCard({ icon, title, description }: ServiceCardItem) {
