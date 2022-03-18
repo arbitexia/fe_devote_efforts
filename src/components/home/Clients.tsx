@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { gsap } from 'gsap'
 import communicationLab from '../../assets/images/comlab_logo.png'
 import hightech from '../../assets/images/htpkr_logo.png'
 import fedex from '../../assets/images/fedex_logo.png'
@@ -35,6 +36,24 @@ const clientsList: ClientsItem[] = [
 ]
 
 function Clients() {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.clients',
+        start: 'top center+=200',
+      },
+    })
+    tl.from(
+      '.clients-content a',
+      {
+        autoAlpha: 0,
+        duration: 1,
+        stagger: 0.2,
+        y: 40,
+      },
+      '+=0.1'
+    )
+  })
   return (
     <div className="clients">
       <div className="container">

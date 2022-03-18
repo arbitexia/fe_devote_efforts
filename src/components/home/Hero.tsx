@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../../styles/home/hero.scss'
 import iconInstagram from '../../assets/images/Instagram.svg'
 import iconTwitter from '../../assets/images/Twitter.svg'
 import iconYoutube from '../../assets/images/Youtube.svg'
 
-function Hero() {
+function Hero(props) {
+  const tl = props.timeline
+  useEffect(() => {
+    tl.from('.hero-caption', { autoAlpha: 0, duration: 1.6 })
+    tl.from('.hero-caption', { y: 40, duration: 1.2 }, 0)
+    tl.from('.hero-description', { autoAlpha: 0, duration: 1.6 }, 1)
+    tl.from('.hero-description', { y: 40, duration: 1.2 }, 1)
+    tl.from('.hero-features', { autoAlpha: 0, duration: 1.6 }, 1)
+    tl.from('.hero-features', { y: 40, duration: 1.2 }, 1)
+    tl.from(
+      '.hero-social-links a',
+      {
+        autoAlpha: 0,
+        duration: 1,
+        stagger: 0.2,
+        y: 25,
+      },
+      1
+    )
+    tl.from('.hero-img', { autoAlpha: 0, duration: 1 }, '+=0')
+  }, [tl])
   return (
     <section className="hero">
       <div className="container">

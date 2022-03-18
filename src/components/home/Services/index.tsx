@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ServiceCard from './serviceCard'
+import { gsap } from 'gsap'
 import '../../../styles/home/services.scss'
 import ServiceCardItems from './serviceCardItem'
 
 function Services() {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.services',
+        start: 'top center+=200',
+      },
+    })
+    tl.from('.services', { opacity: 0, duration: 0.5 })
+    tl.from('.services .caption', { opacity: 0, y: 40, duration: 0.3 })
+    tl.from('.services .description', { opacity: 0, y: 40, duration: 0.3 })
+    const tl1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.service-card',
+        start: 'top center+=200',
+      },
+    })
+    tl1.from('.services .service-card', {
+      opacity: 0,
+      y: 40,
+      stagger: 0.2,
+      duration: 0.3,
+    })
+  })
   return (
     <div className="services">
       <div className="container">
@@ -18,6 +42,7 @@ function Services() {
               powering your digital presence, we do it all.
             </div>
           </div>
+
           <div className="service-cards space-between row-wrap wgs-2 wge-8 swg wg">
             {ServiceCardItems.map((card, i) => {
               return (

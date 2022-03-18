@@ -3,7 +3,7 @@
   padding-top: 150px;
   padding-bottom: 125px;
   overflow: hidden;
-  
+  position: relative;
   .capt{
     @include caption;
   }

@@ -1,8 +1,51 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { gsap } from 'gsap'
 import avatar from '../../assets/images/avatar.jpg'
 import '../../styles/home/ourClients.scss'
 
 function OurClients() {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.ourclients .testimonial',
+        start: 'top center+=200',
+      },
+    })
+    tl.from(
+      '.ourclients .testimonial',
+      {
+        autoAlpha: 0,
+        y: 40,
+        duration: 1,
+      },
+      '+=0.1'
+    )
+    tl.from('.ourclients .avatar-l', {
+      autoAlpha: 0,
+      y: 40,
+      duration: 1,
+    })
+    tl.from('.ourclients .capt', {
+      autoAlpha: 0,
+      y: 40,
+      duration: 1,
+    })
+    tl.from('.ourclients-bottom .desc', {
+      autoAlpha: 0,
+      y: 40,
+      duration: 1,
+    })
+    tl.from('.ourclients .client', {
+      autoAlpha: 0,
+      y: 40,
+      duration: 1,
+    })
+    tl.from('.ourclients .features', {
+      autoAlpha: 0,
+      y: 40,
+      duration: 1,
+    })
+  })
   return (
     <div className="ourclients">
       <div className="container">
@@ -17,7 +60,7 @@ function OurClients() {
           <div className="capt wgs-5 wge-9 swg wg">Our clients speak</div>
         </div>
         <div className="ourclients-bottom grid-layout">
-          <div className="avatar wgs-1 wge-4 wg ">
+          <div className="avatar-l wgs-1 wge-4 wg ">
             <img src={avatar} />
           </div>
           <div className="content  wgs-5 wge-8 swg wg">

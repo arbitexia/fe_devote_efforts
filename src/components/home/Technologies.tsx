@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { gsap } from 'gsap'
 import iconVue from '../../assets/images/vue_icon.svg'
 import iconReact from '../../assets/images/react_icon.svg'
 import iconAngular from '../../assets/images/angular_icon.svg'
@@ -50,6 +51,39 @@ const techList: TechnologyItem[] = [
 ]
 
 function Technologies() {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.technologies .capt',
+        start: 'top center+=200',
+      },
+    })
+    tl.from(
+      '.technologies .capt,.technologies .desc',
+      {
+        autoAlpha: 0,
+        duration: 1,
+        y: 40,
+      },
+      '+=0.1'
+    )
+    const tl1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.tech-item',
+        start: 'top center+=200',
+      },
+    })
+    tl1.from(
+      '.tech-item',
+      {
+        autoAlpha: 0,
+        stagger: 0.2,
+        duration: 0.5,
+        x: '100vw',
+      },
+      '+=0.1'
+    )
+  })
   return (
     <div className="technologies">
       <div className="container">
@@ -60,7 +94,7 @@ function Technologies() {
         <div className="technologies-content">
           {techList.map((item, i) => {
             return (
-              <a href={item.url} key={i}>
+              <a className="tech-item" href={item.url} key={i}>
                 <img className="anchor" src={item.image} />
               </a>
             )
