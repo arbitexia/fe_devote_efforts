@@ -62,7 +62,7 @@ function Technologies() {
       '.technologies .capt,.technologies .desc',
       {
         autoAlpha: 0,
-        duration: 1,
+        duration: 0.3,
         y: 40,
       },
       '+=0.1'
@@ -78,7 +78,7 @@ function Technologies() {
       {
         autoAlpha: 0,
         stagger: 0.2,
-        duration: 0.5,
+        duration: 0.3,
         x: '100vw',
       },
       '+=0.1'

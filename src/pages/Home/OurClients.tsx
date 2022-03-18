@@ -16,34 +16,34 @@ function OurClients() {
       {
         autoAlpha: 0,
         y: 40,
-        duration: 1,
+        duration: 0.3,
       },
       '+=0.1'
     );
     tl.from('.ourclients .avatar-l', {
       autoAlpha: 0,
       y: 40,
-      duration: 1,
+      duration: 0.3,
     });
     tl.from('.ourclients .capt', {
       autoAlpha: 0,
       y: 40,
-      duration: 1,
+      duration: 0.3,
     });
     tl.from('.ourclients-bottom .desc', {
       autoAlpha: 0,
       y: 40,
-      duration: 1,
+      duration: 0.3,
     });
     tl.from('.ourclients .client', {
       autoAlpha: 0,
       y: 40,
-      duration: 1,
+      duration: 0.3,
     });
     tl.from('.ourclients .features', {
       autoAlpha: 0,
       y: 40,
-      duration: 1,
+      duration: 0.3,
     });
   });
   return (

@@ -1,15 +1,13 @@
-import {
-  Services,
-  Clients,
-  Hero,
-  About,
-  OurProject,
-  Technologies,
-  OurClients,
-  SuccessfulStory,
-} from '@/components/Home';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import About from './About';
+import Clients from './Clients';
+import Hero from './Hero';
+import OurClients from './OurClients';
+import OurProject from './OurProjects';
+import Services from './Services';
+import SuccessfulStory from './SuccessfulStory';
+import Technologies from './Technologies';
 
 function HomeContainer() {
   gsap.registerPlugin(ScrollTrigger);

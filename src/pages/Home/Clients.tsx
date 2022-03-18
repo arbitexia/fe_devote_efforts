@@ -47,7 +47,7 @@ function Clients() {
       '.clients-content a',
       {
         autoAlpha: 0,
-        duration: 1,
+        duration: 0.3,
         stagger: 0.2,
         y: 40,
       },

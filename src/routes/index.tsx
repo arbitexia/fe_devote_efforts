@@ -3,7 +3,7 @@ import HomeContainer from '../pages/Home';
 import AboutContainer from '../pages/About';
 import { BasicLayout } from '../layout';
 import PublicRoute from './public-route';
-import '../styles/App.scss';
+import '@/styles/App.scss';
 
 const AppRoutes = () => (
   <Switch>

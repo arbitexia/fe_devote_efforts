@@ -7,23 +7,23 @@ import iconYoutube from '@/assets/images/Youtube.svg';
 function Hero(props) {
   const tl = props.timeline;
   useEffect(() => {
-    tl.from('.hero-caption', { autoAlpha: 0, duration: 1.6 });
-    tl.from('.hero-caption', { y: 40, duration: 1.2 }, 0);
-    tl.from('.hero-description', { autoAlpha: 0, duration: 1.6 }, 1);
-    tl.from('.hero-description', { y: 40, duration: 1.2 }, 1);
-    tl.from('.hero-features', { autoAlpha: 0, duration: 1.6 }, 1);
-    tl.from('.hero-features', { y: 40, duration: 1.2 }, 1);
+    tl.from('.hero-caption', { autoAlpha: 0, duration: 0.36 });
+    tl.from('.hero-caption', { y: 40, duration: 0.32 }, 0);
+    tl.from('.hero-description', { autoAlpha: 0, duration: 0.36 }, 1);
+    tl.from('.hero-description', { y: 40, duration: 0.32 }, 1);
+    tl.from('.hero-features', { autoAlpha: 0, duration: 0.36 }, 1);
+    tl.from('.hero-features', { y: 40, duration: 0.32 }, 1);
     tl.from(
       '.hero-social-links a',
       {
         autoAlpha: 0,
-        duration: 1,
+        duration: 0.3,
         stagger: 0.2,
         y: 25,
       },
       1
     );
-    tl.from('.hero-img', { autoAlpha: 0, duration: 1 }, '+=0');
+    tl.from('.hero-img', { autoAlpha: 0, duration: 0.3 }, '+=0');
   }, [tl]);
   return (
     <section className="hero">

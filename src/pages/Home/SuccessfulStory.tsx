@@ -15,27 +15,27 @@ function SuccessfulStory() {
       {
         autoAlpha: 0,
         y: 40,
-        duration: 1,
+        duration: 0.3,
       },
       '+=0.1'
     );
     tl.from('.success .unsure', {
       autoAlpha: 0,
       y: 40,
-      duration: 1,
+      duration: 0.3,
     });
     tl.from(
       '.success-right .desc',
       {
         autoAlpha: 0,
         y: 40,
-        duration: 1,
+        duration: 0.3,
       },
       '+=0.5'
     );
     tl.from('.success .pricing', {
       autoAlpha: 0,
-      duration: 1,
+      duration: 0.3,
     });
     const tl2 = gsap.timeline({
       scrollTrigger: {
@@ -47,7 +47,7 @@ function SuccessfulStory() {
       autoAlpha: 0,
       y: 40,
       stagger: 0.3,
-      duration: 1,
+      duration: 0.3,
     });
   });
   return (

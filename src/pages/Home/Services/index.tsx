@@ -12,7 +12,7 @@ function Services() {
         start: 'top center+=200',
       },
     });
-    tl.from('.services', { opacity: 0, duration: 0.5 });
+    tl.from('.services', { opacity: 0, duration: 0.3 });
     tl.from('.services .caption', { opacity: 0, y: 40, duration: 0.3 });
     tl.from('.services .description', { opacity: 0, y: 40, duration: 0.3 });
     const tl1 = gsap.timeline({

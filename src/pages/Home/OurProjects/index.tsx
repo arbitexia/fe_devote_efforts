@@ -16,7 +16,7 @@ function OurProject() {
       '.project-top',
       {
         autoAlpha: 0,
-        duration: 1,
+        duration: 0.3,
         y: 40,
       },
       '+=0.1'

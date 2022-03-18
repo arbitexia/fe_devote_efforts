@@ -17,7 +17,7 @@ function About() {
       {
         autoAlpha: 0,
         y: 60,
-        duration: 1,
+        duration: 0.3,
       },
       '+=0.1'
     );
@@ -29,13 +29,13 @@ function About() {
     });
     tl1.from('.panel-img-top', {
       autoAlpha: 0,
-      duration: 1,
+      duration: 0.3,
       scale: 0.2,
       rotateY: 540,
     });
     tl1.from('.panel-desc-top', {
       autoAlpha: 0,
-      duration: 1,
+      duration: 0.3,
       x: '100vw',
     });
     const tl2 = gsap.timeline({
@@ -46,14 +46,14 @@ function About() {
     });
     tl2.from('.panel-img-bottom', {
       autoAlpha: 0,
-      duration: 1,
+      duration: 0.3,
       scale: 0.2,
       rotateY: 540,
     });
     tl2.from('.panel-desc-bottom', {
       autoAlpha: 0,
       y: 40,
-      duration: 1,
+      duration: 0.3,
     });
   });
   return (
