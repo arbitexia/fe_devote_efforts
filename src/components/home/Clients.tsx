@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react'
-import { gsap } from 'gsap'
-import communicationLab from '../../assets/images/comlab_logo.png'
-import hightech from '../../assets/images/htpkr_logo.png'
-import fedex from '../../assets/images/fedex_logo.png'
-import kssda from '../../assets/images/kssda_logo.png'
-import inessoft from '../../assets/images/inessoft_logo.png'
-import '../../styles/home/clients.scss'
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import communicationLab from '@/assets/images/comlab_logo.png';
+import hightech from '@/assets/images/htpkr_logo.png';
+import fedex from '@/assets/images/fedex_logo.png';
+import kssda from '@/assets/images/kssda_logo.png';
+import inessoft from '@/assets/images/inessoft_logo.png';
+import '@/styles/home/clients.scss';
 
 interface ClientsItem {
-  url: string
-  image: string
+  url: string;
+  image: string;
 }
 
 const clientsList: ClientsItem[] = [
@@ -33,7 +33,7 @@ const clientsList: ClientsItem[] = [
     url: '',
     image: inessoft,
   },
-]
+];
 
 function Clients() {
   useEffect(() => {
@@ -42,7 +42,7 @@ function Clients() {
         trigger: '.clients',
         start: 'top center+=200',
       },
-    })
+    });
     tl.from(
       '.clients-content a',
       {
@@ -52,8 +52,8 @@ function Clients() {
         y: 40,
       },
       '+=0.1'
-    )
-  })
+    );
+  });
   return (
     <div className="clients">
       <div className="container">
@@ -63,12 +63,12 @@ function Clients() {
               <a href={item.url} key={i}>
                 <img src={item.image} />
               </a>
-            )
+            );
           })}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Clients
+export default Clients;

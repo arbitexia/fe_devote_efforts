@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
-import ServiceCard from './serviceCard'
-import { gsap } from 'gsap'
-import '../../../styles/home/services.scss'
-import ServiceCardItems from './serviceCardItem'
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import ServiceCardItems from './ServiceCardItem';
+import ServiceCard from './ServiceCard';
+import '@/styles/home/services.scss';
 
 function Services() {
   useEffect(() => {
@@ -11,23 +11,23 @@ function Services() {
         trigger: '.services',
         start: 'top center+=200',
       },
-    })
-    tl.from('.services', { opacity: 0, duration: 0.5 })
-    tl.from('.services .caption', { opacity: 0, y: 40, duration: 0.3 })
-    tl.from('.services .description', { opacity: 0, y: 40, duration: 0.3 })
+    });
+    tl.from('.services', { opacity: 0, duration: 0.5 });
+    tl.from('.services .caption', { opacity: 0, y: 40, duration: 0.3 });
+    tl.from('.services .description', { opacity: 0, y: 40, duration: 0.3 });
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: '.service-card',
         start: 'top center+=200',
       },
-    })
+    });
     tl1.from('.services .service-card', {
       opacity: 0,
       y: 40,
       stagger: 0.2,
       duration: 0.3,
-    })
-  })
+    });
+  });
   return (
     <div className="services" id="services">
       <div className="container">
@@ -51,13 +51,13 @@ function Services() {
                   title={card.title}
                   description={card.description}
                 />
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Services
+export default Services;

@@ -1,8 +1,8 @@
-import React from 'react'
-import './styles/App.scss'
-import { BrowserRouter } from 'react-router-dom'
-import AppRoutes from './routes'
-import MouseActionProvider from './components/mouseActionProvider'
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes';
+import MouseActionProvider from './components/mouseActionProvider';
+import './styles/App.scss';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         </div>
       </MouseActionProvider>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

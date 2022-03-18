@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom';
 
 const PublicRoute = ({ component: Component, layout: Layout, ...rest }) => {
   return (
@@ -10,7 +10,7 @@ const PublicRoute = ({ component: Component, layout: Layout, ...rest }) => {
         </Layout>
       )}
     />
-  )
-}
+  );
+};
 
-export default PublicRoute
+export default PublicRoute;

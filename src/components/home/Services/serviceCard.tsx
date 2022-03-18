@@ -1,6 +1,6 @@
-import React from 'react'
-import '../../../styles/home/serviceCard.scss'
-import { ServiceCardItem } from './serviceCardItem'
+import React from 'react';
+import { ServiceCardItem } from './ServiceCardItem';
+import '@/styles/home/serviceCard.scss';
 
 function ServiceCard({ icon, title, description }: ServiceCardItem) {
   return (
@@ -11,7 +11,7 @@ function ServiceCard({ icon, title, description }: ServiceCardItem) {
       <div className="card-title">{title}</div>
       <div className="card-description other">{description}</div>
     </div>
-  )
+  );
 }
 
-export default ServiceCard
+export default ServiceCard;

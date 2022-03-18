@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
-import { gsap } from 'gsap'
-import img1 from '../../assets/images/about_img1.jpg'
-import img2 from '../../assets/images/about_img2.jpg'
-import '../../styles/home/about.scss'
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import img1 from '@/assets/images/about_img1.jpg';
+import img2 from '@/assets/images/about_img2.jpg';
+import '@/styles/home/about.scss';
 
 function About() {
   useEffect(() => {
@@ -11,7 +11,7 @@ function About() {
         trigger: '.about .capt',
         start: 'top center+=200',
       },
-    })
+    });
     tl.from(
       '.about .capt',
       {
@@ -20,42 +20,42 @@ function About() {
         duration: 1,
       },
       '+=0.1'
-    )
+    );
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: '.panel-img-top',
         start: 'top center+=200',
       },
-    })
+    });
     tl1.from('.panel-img-top', {
       autoAlpha: 0,
       duration: 1,
       scale: 0.2,
       rotateY: 540,
-    })
+    });
     tl1.from('.panel-desc-top', {
       autoAlpha: 0,
       duration: 1,
       x: '100vw',
-    })
+    });
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: '.panel-img-bottom',
         start: 'top center+=200',
       },
-    })
+    });
     tl2.from('.panel-img-bottom', {
       autoAlpha: 0,
       duration: 1,
       scale: 0.2,
       rotateY: 540,
-    })
+    });
     tl2.from('.panel-desc-bottom', {
       autoAlpha: 0,
       y: 40,
       duration: 1,
-    })
-  })
+    });
+  });
   return (
     <div className="about" id="about-us">
       <div className="container ">
@@ -89,7 +89,7 @@ function About() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

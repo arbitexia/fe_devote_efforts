@@ -1,13 +1,13 @@
-import project1 from '../../../assets/images/project-1.png'
-import project2 from '../../../assets/images/project-2.png'
-import project3 from '../../../assets/images/project-3.png'
-import project4 from '../../../assets/images/project-4.png'
+import project1 from '@/assets/images/project-1.png';
+import project2 from '@/assets/images/project-2.png';
+import project3 from '@/assets/images/project-3.png';
+import project4 from '@/assets/images/project-4.png';
 
 export interface GalleryItem {
-  image: string
-  url: string
-  title: string
-  description: string
+  image: string;
+  url: string;
+  title: string;
+  description: string;
 }
 
 const projects: GalleryItem[] = [
@@ -41,6 +41,6 @@ const projects: GalleryItem[] = [
     title: 'Chakra',
     description: 'Website, Development',
   },
-]
+];
 
-export default projects
+export default projects;

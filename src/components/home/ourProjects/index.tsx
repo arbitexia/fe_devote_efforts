@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
-import Gallery from './gallery'
-import '../../../styles/home/ourProject.scss'
-import GalleryItem from './galleryItem'
-import { gsap } from 'gsap'
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import Gallery from './Gallery';
+import GalleryItem from './GalleryItem';
+import '@/styles/home/ourProject.scss';
 
 function OurProject() {
   useEffect(() => {
@@ -11,7 +11,7 @@ function OurProject() {
         trigger: '.project-top',
         start: 'top center+=200',
       },
-    })
+    });
     tl.from(
       '.project-top',
       {
@@ -20,13 +20,13 @@ function OurProject() {
         y: 40,
       },
       '+=0.1'
-    )
+    );
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: '.gallery-desc',
         start: 'top center+=200',
       },
-    })
+    });
     tl1.fromTo(
       '.gallery-desc',
       {
@@ -38,8 +38,8 @@ function OurProject() {
         webClipPath: 'inset(0 0% 0 0)',
         duration: 0.6,
       }
-    )
-  })
+    );
+  });
   return (
     <div className="ourproject">
       <div className="container">
@@ -66,7 +66,7 @@ function OurProject() {
                 title={project.title}
                 description={project.description}
               />
-            )
+            );
           })}
           <div className="gallery-desc row-wrap wgs-5 wge-9 swg wg">
             <div className="v-align">
@@ -80,7 +80,7 @@ function OurProject() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default OurProject
+export default OurProject;

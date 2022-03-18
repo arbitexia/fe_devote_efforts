@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import {
   Services,
@@ -9,14 +9,14 @@ import {
   Technologies,
   OurClients,
   SuccessfulStory,
-} from '../../components/home'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
+} from '@/components/home';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
 function HomeContainer() {
-  console.log('HomePage')
-  gsap.registerPlugin(ScrollTrigger)
-  const timeline = gsap.timeline({})
+  console.log('HomePage');
+  gsap.registerPlugin(ScrollTrigger);
+  const timeline = gsap.timeline({});
 
   return (
     <main>
@@ -29,7 +29,7 @@ function HomeContainer() {
       <OurClients />
       <SuccessfulStory />
     </main>
-  )
+  );
 }
 
-export default HomeContainer
+export default HomeContainer;

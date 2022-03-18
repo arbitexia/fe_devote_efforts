@@ -1,9 +1,9 @@
-import { Switch } from 'react-router-dom'
-import HomeContainer from '../pages/home'
-import AboutContainer from '../pages/About'
-import { BasicLayout } from '../layout'
-import PublicRoute from './public-route'
-import '../styles/App.scss'
+import { Switch } from 'react-router-dom';
+import HomeContainer from '../pages/home';
+import AboutContainer from '../pages/About';
+import { BasicLayout } from '../layout';
+import PublicRoute from './public-route';
+import '../styles/App.scss';
 
 const AppRoutes = () => (
   <Switch>
@@ -20,6 +20,6 @@ const AppRoutes = () => (
       layout={BasicLayout}
     />
   </Switch>
-)
+);
 
-export default AppRoutes
+export default AppRoutes;

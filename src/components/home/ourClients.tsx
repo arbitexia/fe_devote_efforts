@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
-import { gsap } from 'gsap'
-import avatar from '../../assets/images/avatar.jpg'
-import '../../styles/home/ourClients.scss'
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import avatar from '../../assets/images/avatar.jpg';
+import '../../styles/home/ourClients.scss';
 
 function OurClients() {
   useEffect(() => {
@@ -10,7 +10,7 @@ function OurClients() {
         trigger: '.ourclients .testimonial',
         start: 'top center+=200',
       },
-    })
+    });
     tl.from(
       '.ourclients .testimonial',
       {
@@ -19,33 +19,33 @@ function OurClients() {
         duration: 1,
       },
       '+=0.1'
-    )
+    );
     tl.from('.ourclients .avatar-l', {
       autoAlpha: 0,
       y: 40,
       duration: 1,
-    })
+    });
     tl.from('.ourclients .capt', {
       autoAlpha: 0,
       y: 40,
       duration: 1,
-    })
+    });
     tl.from('.ourclients-bottom .desc', {
       autoAlpha: 0,
       y: 40,
       duration: 1,
-    })
+    });
     tl.from('.ourclients .client', {
       autoAlpha: 0,
       y: 40,
       duration: 1,
-    })
+    });
     tl.from('.ourclients .features', {
       autoAlpha: 0,
       y: 40,
       duration: 1,
-    })
-  })
+    });
+  });
   return (
     <div className="ourclients">
       <div className="container">
@@ -88,7 +88,7 @@ function OurClients() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default OurClients
+export default OurClients;
