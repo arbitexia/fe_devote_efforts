@@ -1,0 +1,223 @@
+@import '../config.scss';
+.ourclients {
+  background: rgba(25, 42, 89, 0.15);
+  padding-top: 150px;
+  padding-bottom: 160px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    filter: grayscale(100%);
+  }
+  .ourclients-top {
+    margin-bottom: 60px;
+    .testimonial {
+      .title {
+        display: flex;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 143%;
+        /* or 31px */
+    
+        letter-spacing: -0.025em;
+    
+        /* main color */
+    
+        color: #5A368D;
+      }
+      .title::before{
+        height: 3px;
+        display: flex;
+        position: relative;
+        top: 0.7em;
+        width: 30px;
+        background: #5A368D;;
+        content: '';
+        margin-right: 15px;
+      }
+      .desc {
+        margin-top:30px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        /* or 29px */
+    
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.015em;
+    
+        color: #5E6A8B;
+    
+      }
+    }
+    .capt {
+      font-weight: 500;
+      font-size: 62px;
+      line-height: 110%;
+      /* or 68px */
+  
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.05em;
+  
+      color: #000000;
+    }
+  }
+  .ourclients-bottom{
+    .content {
+      .desc {
+        font-style: italic;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 180%;
+        /* or 32px */
+        position: relative;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.015em;
+
+        color: #000000;
+        > span {
+          display: none;
+          font-family: 'Ruda';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 72px;
+          line-height: 0;
+          text-indent: 2px;
+          top: 30px;
+          position: relative;
+          color: #7C24F8;
+        }
+        &::before {
+          content: '“';
+          display: flex;
+          position: absolute;
+          top: 20px;
+          left: -30px;
+          font-family: 'Ruda';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 72px;
+          line-height: 27px;
+          /* identical to box height, or 38% */
+
+          text-indent: 2px;
+
+          color: #7C24F8;
+        }
+      }
+      .client {
+        margin-top: 40px;
+        display: flex;
+        .avatar {
+          display: none;
+          width: 50px;
+          height: 50px;
+          margin-right: 20px;
+          > img {
+            border-radius: 50%;
+          }
+        }
+        .info {
+          .name {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 27px;
+            /* identical to box height, or 169% */
+  
+            letter-spacing: -0.02em;
+            text-indent: 2px;
+            font-feature-settings: 'liga' off;
+  
+            color: #000000;
+          }
+          .job {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            /* identical to box height, or 169% */
+  
+            letter-spacing: -0.01em;
+            text-indent: 2px;
+            font-feature-settings: 'liga' off;
+  
+            color: #5E6A8B;
+  
+          }
+        }
+      }
+      .features {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        button {
+          display: flex;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 90%;
+          color: #7C24F8;
+          text-shadow: 0px 1px 10px rgba(90, 54, 141, 0.2);
+          background-color: transparent;
+        }
+        .prev::before {
+          content: "\2190";
+          margin-right: 15px;
+          font-family: monospace;
+          font-size: 40px;
+          margin-top: -2px;
+        }
+        .next::after {
+          content: "\2192";
+          margin-left: 15px;
+          font-family: monospace;
+          font-size: 40px;
+          margin-top: -2px;
+        }
+      }
+    }
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 30px;
+  width: 100%;
+}
+
+@media screen and (max-width: $small) {
+  .ourclients {
+    padding-top: 90px;
+    padding-bottom: 75px;
+  }
+  .ourclients .ourclients-top {
+    margin-bottom: 50px;
+    .capt{
+      margin-top: 40px;
+    } 
+  }
+  .ourclients .ourclients-bottom {
+    .content {
+      .client .avatar {
+        display: block;
+      }
+      .desc {
+        display: block;
+        > span {
+          display: inline;
+        }
+      }
+      .desc::before{
+        content: "";
+      }
+    }
+    .avatar {
+      display: none;
+    }
+  }
+}

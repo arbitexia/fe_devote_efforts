@@ -29,7 +29,7 @@ function Services() {
     })
   })
   return (
-    <div className="services">
+    <div className="services" id="services">
       <div className="container">
         <div className="grid-layout">
           <div className="caption wgs-2 wge-6 swg wg">
@@ -42,7 +42,6 @@ function Services() {
               powering your digital presence, we do it all.
             </div>
           </div>
-
           <div className="service-cards space-between row-wrap wgs-2 wge-8 swg wg">
             {ServiceCardItems.map((card, i) => {
               return (

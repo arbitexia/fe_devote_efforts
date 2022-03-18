@@ -85,7 +85,7 @@ function Technologies() {
     )
   })
   return (
-    <div className="technologies">
+    <div className="technologies" id="technologies">
       <div className="container">
         <div className="capt">Technologies</div>
         <div className="desc">

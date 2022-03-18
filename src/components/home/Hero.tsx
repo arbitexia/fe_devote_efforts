@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import React from 'react'
 import '../../styles/home/hero.scss'
 import iconInstagram from '../../assets/images/Instagram.svg'
 import iconTwitter from '../../assets/images/Twitter.svg'
