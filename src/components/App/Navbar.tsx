@@ -44,29 +44,29 @@ function Navbar() {
             }}
           >
             <li>
-              <Link className="anchor" to="/aboutus">
+              <a className="anchor" href="#about-us">
                 About Us
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="anchor" to="/services">
+              <a className="anchor" href="#services">
                 Services
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="anchor" to="/technologies">
+              <a className="anchor" href="#technologies">
                 Technologies
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="anchor" to="/pricing">
+              <a className="anchor" href="#pricing">
                 Pricing
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="anchor" to="/contactus">
+              <a className="anchor" href="#contact-us">
                 Contact Us
-              </Link>
+              </a>
             </li>
           </ul>
         )}
