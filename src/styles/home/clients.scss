@@ -16,10 +16,6 @@
     img {
       filter: grayscale(100%);
     }
-    &:hover{
-      color: $secondColor;
-      background: radial-gradient(50% 50% at 47.75% 57.25%, rgba(124, 36, 248, 0.25) 0%, rgba(196, 196, 196, 0) 100%)
-    }
   }
 }
 

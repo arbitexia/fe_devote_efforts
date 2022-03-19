@@ -6,11 +6,11 @@ import './styles/App.scss';
 function App() {
   return (
     <BrowserRouter>
-      <MouseActionProvider>
-        <div className="App">
+      <div className="App">
+        <MouseActionProvider>
           <AppRoutes />
-        </div>
-      </MouseActionProvider>
+        </MouseActionProvider>
+      </div>
     </BrowserRouter>
   );
 }

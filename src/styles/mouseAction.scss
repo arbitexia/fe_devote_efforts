@@ -18,3 +18,27 @@
   margin-left: -25px;
   margin-top: -25px;
 }
+
+.blur-content{
+  position:absolute;
+  pointer-events: none;
+  width: 300px;
+  height: 300px;
+  opacity: 0%;
+  color: $secondColor;
+  background: radial-gradient(42.75% 42.75% at 47.75% 57.25%, rgba(124, 36, 248, 0.15) 10%, rgba(196, 196, 196, 0) 100%);
+  transition: opacity 0.3s;
+}
+
+.blur-content-active{
+  opacity: 100%;
+}
+
+@media screen and (max-width: $small) {
+  .pos {
+    display: none;
+  }
+  .blur-content {
+    display: none;
+  }
+}

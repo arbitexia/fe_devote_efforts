@@ -60,7 +60,7 @@ function Clients() {
         <div className="clients-content">
           {clientsList.map((item, i) => {
             return (
-              <a href={item.url} key={i}>
+              <a className="blur center" href={item.url} key={i}>
                 <img src={item.image} />
               </a>
             );

@@ -3,6 +3,8 @@
 .service-card {
   margin-top: 80px;
   .card-icon {
+    display: flex;
+    align-items: bottom;
     width: 55px;
     height: 55px;
   }
