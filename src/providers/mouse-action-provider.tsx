@@ -13,7 +13,7 @@ function MouseActionProvider(props) {
   const [isBlur, setIsBlur] = useState(true);
   useEffect(() => {
     const getMousePos = (e) => {
-      if (!e.target.classList.length) return;
+      if (e.target.tagName === 'HTML') return;
       const pX = e.pageX;
       const pY = e.pageY;
       setMPos({ x: pX, y: pY });
