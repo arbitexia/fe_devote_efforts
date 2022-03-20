@@ -14,6 +14,8 @@
     "customize-cra": "^1.0.0",
     "eslint-plugin-jest": "^26.1.1",
     "gsap": "^3.9.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "node-sass": "^7.0.1",
     "path": "^0.12.7",
     "react": "^17.0.2",
@@ -32,6 +34,19 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts ./src --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "browserslist": {
     "production": [
