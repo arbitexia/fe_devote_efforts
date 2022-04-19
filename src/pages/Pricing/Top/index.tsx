@@ -1,6 +1,5 @@
 import Card from './PlanCard.cpn';
 import '@/styles/pricing/top.scss';
-import '@/styles/pricing/plan.scss';
 import { cardList } from './mock-data';
 
 function PricingTop() {
