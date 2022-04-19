@@ -1,0 +1,75 @@
+@import '../config.scss';
+
+.connect{
+  justify-content: center;
+  padding: 90px 0px 70px 0px;
+  background:  linear-gradient(0deg, rgba(230, 236, 255, 0.7), rgba(230, 236, 255, 0.7));
+  position: relative;
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background: url(../../assets/images/connect_back.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  .connect-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .connect-caption h2{
+    align-self: center;
+    max-width: 551px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: #000000;
+    span {
+      font-weight: 500;
+      font-size: 62px;
+      line-height: 120%;
+      letter-spacing: -0.05em;
+      color: #5a368d;
+    }
+  }
+  .email-input{
+    margin-top: 45px;
+    width: 370px;
+    background: transparent;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.03em;
+    &::placeholder{
+      color: rgba(90, 102, 135, 0.8);
+    }
+    color: #000000;
+    padding: 15px 5px;
+    border: none;
+    outline: none;
+    z-index: 1;
+    border-bottom: 1px solid rgba(25, 42, 89, 0.15);
+  }
+  .btn-arrow button {
+    margin-top: 50px;
+    padding: 0;
+    z-index: 1;
+    @include btn-arrow;
+    &::before {
+      transform: rotate(-35deg);
+    }
+  }
+}

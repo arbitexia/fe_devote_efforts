@@ -1,0 +1,78 @@
+@import '../config.scss';
+
+.card-container {
+  height: 610px;
+  background: #EFF2FF;
+  border: 1px solid #E5E8F3;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+  .card-plan{
+    padding-left: 20px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 143%;
+    text-align: right;
+    letter-spacing: -0.025em;
+    color: #5E6A8B;
+  }
+  .card-title {
+    padding-left: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+  .divider {
+    border-bottom: 1px solid rgba(25, 42, 89, 0.2);
+    margin-bottom: 20px;
+  }
+  .card-item {
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: -0.02em;
+    color: #5E6A8B;
+    &::before {
+      content: '>>';
+      margin-right: 20px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 160%;
+      letter-spacing: -0.02em;
+      color: #000000;
+    }
+  }
+  .card-price {
+    padding-left: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    color: #5A368D;
+  }
+  .card-features button{
+    margin:30px 0px;
+    padding-left: 20px;
+    @include btn-arrow;
+  }
+  &:hover {
+    height: 680px;
+    background: #FFFFFF;
+    box-shadow: 5px 15px 70px -5px rgba(59, 68, 96, 0.15);
+    transition: all 0.1s;
+    .divider {
+      border-bottom: 1px solid #E5E8F3;
+    }
+  }
+}
