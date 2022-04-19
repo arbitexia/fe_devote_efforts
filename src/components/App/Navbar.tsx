@@ -59,7 +59,7 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a className="anchor" href="#pricing">
+              <a className="anchor" href="/pricing">
                 Pricing
               </a>
             </li>

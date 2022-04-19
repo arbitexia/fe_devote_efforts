@@ -9,7 +9,7 @@ import Services from './Services';
 import SuccessfulStory from './SuccessfulStory';
 import Technologies from './Technologies';
 
-function HomeContainer() {
+function HomePage() {
   gsap.registerPlugin(ScrollTrigger);
   const timeline = gsap.timeline({});
 
@@ -27,4 +27,4 @@ function HomeContainer() {
   );
 }
 
-export default HomeContainer;
+export default HomePage;

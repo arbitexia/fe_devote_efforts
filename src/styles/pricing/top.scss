@@ -1,0 +1,35 @@
+@import '../config.scss';
+.top{
+  .top-caption{
+    margin-top: 70px;
+    max-width: 531px;
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 110%;
+    /* or 68px */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.07em;
+
+    color: #000000;
+  }
+  .top-description{
+    margin-top: 50px;
+    .title{
+      @include caption;
+    }
+    .description{
+      margin-top: 25px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 160%;
+      /* or 32px */
+
+      display: flex;
+      align-items: center;
+
+      color: rgba(25, 42, 89, 0.7);
+    }
+  }
+}

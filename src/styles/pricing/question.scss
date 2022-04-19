@@ -1,0 +1,118 @@
+@import '../config.scss';
+
+.question{
+  margin: 180px 0px;
+  .question-caption h2{
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    align-self: center;
+    text-align: center;
+    color: #000000;
+  }
+  .question-caption .business {
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    text-align: center;
+    align-self: center;
+    color: #5a368d;
+  }
+  .description{
+    max-width: 844px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    color: #5E6A8B;
+  }
+
+  .list{
+    margin-top: 120px;
+  }
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li .header{
+    padding: 15px 0px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 250%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #000000;
+    border-bottom: 1px solid rgba(25, 42, 89, 0.15);
+    label{
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size:40px;
+      font-weight: 200;
+      color: #D7D9E0;
+    }
+  }
+    
+  ul ul li{
+    padding: 10px;
+  }
+  
+  
+  input[type="checkbox"]{
+    position: absolute;
+    left: -9999px;
+  }
+
+  input[type="checkbox"] ~ div{
+    .minus{
+      display: none;
+    }
+    .plus{
+      display: flex;
+    }
+  }
+
+  input[type="checkbox"]:checked ~ div{
+    .minus{
+      display: flex;
+    }
+    .plus{
+      display: none;
+    }
+  }
+  
+  input[type="checkbox"] ~ ul{
+    height: 0;
+    transform: scaleY(0);
+  }
+  
+  input[type="checkbox"]:checked ~ ul{
+    height: 100%;
+    transform-origin: top;
+    transition: transform .2s ease-out;
+    transform: scaleY(1); 
+  }
+  
+  input[type="checkbox"]:checked + .header{
+    color: #5A368D;
+    label{
+      color: #5A368D;
+    }
+  }
+  
+}
