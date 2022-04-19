@@ -1,4 +1,7 @@
+import Card from './PlanCard.cpn';
 import '@/styles/pricing/top.scss';
+import '@/styles/pricing/plan.scss';
+import { cardList } from './mock-data';
 
 function PricingTop() {
   return (
@@ -18,6 +21,25 @@ function PricingTop() {
               process.
             </div>
           </div>
+        </div>
+        <div className="plan grid-layout">
+          {cardList.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className={`plan-card wgs-${index * 2 + 1} wge-${
+                  index * 2 + 3
+                } swg wg`}
+              >
+                <Card
+                  plan={item.plan}
+                  price={item.price}
+                  list={item.list}
+                  select={item.selected}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

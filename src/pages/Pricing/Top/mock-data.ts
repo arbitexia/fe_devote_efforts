@@ -1,7 +1,4 @@
-import Card from './PlanCard.cpn';
-import '@/styles/pricing/plan.scss';
-
-const cardList = [
+export const cardList = [
   {
     plan: 'Basic',
     price: '$5000+',
@@ -43,31 +40,3 @@ const cardList = [
     selected: false,
   },
 ];
-function TopPlan() {
-  return (
-    <section className="plan">
-      <div className="container">
-        <div className="grid-layout">
-          {cardList.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className={`plan-card wgs-${index * 2 + 1} wge-${
-                  index * 2 + 3
-                } swg wg`}
-              >
-                <Card
-                  plan={item.plan}
-                  price={item.price}
-                  list={item.list}
-                  select={item.selected}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-export default TopPlan;

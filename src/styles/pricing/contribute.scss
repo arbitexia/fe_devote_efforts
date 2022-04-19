@@ -7,7 +7,6 @@
     line-height: 120%;
     letter-spacing: -0.05em;
     color: #000000;
-
     span {
       font-weight: 500;
       font-size: 62px;
@@ -17,7 +16,7 @@
     }
   }
   .contribute-img {
-    background-image: url('../../assets/images/contribute.jfif');
+    background-image: url('../../assets/images/contribute.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -29,10 +28,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 160%;
-    /* or 29px */
-
     letter-spacing: -0.01em;
-
     color: #5E6A8B;
     div{
       padding: 10px 0px;
