@@ -1,7 +1,7 @@
-import { ServiceCardItem } from './ServiceCardItem';
+import { ServiceCardItemProps } from './types';
 import '@/styles/home/serviceCard.scss';
 
-function ServiceCard({ icon, title, description }: ServiceCardItem) {
+function ServiceCard({ icon, title, description }: ServiceCardItemProps) {
   return (
     <div className="service-card">
       <div className="card-icon">

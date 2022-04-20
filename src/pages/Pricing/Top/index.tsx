@@ -1,6 +1,5 @@
 import Card from './PlanCard.cpn';
 import '@/styles/pricing/top.scss';
-import '@/styles/pricing/plan.scss';
 import { cardList } from './mock-data';
 
 function PricingTop() {
@@ -9,7 +8,7 @@ function PricingTop() {
       <div className="container">
         <div className="grid-layout">
           <div className="top-caption wgs-2 wge-7 swg wg">
-            We work with all kinds of budgets.
+            <h2>We work with all kinds of budgets.</h2>
           </div>
         </div>
         <div className="grid-layout">

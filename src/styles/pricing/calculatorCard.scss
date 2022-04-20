@@ -1,0 +1,51 @@
+@import '../config.scss';
+
+.calculator-card {
+  margin: 15px;
+  background: #ECF0FF;
+  box-shadow: 0px 4px 30px rgba(25, 42, 89, 0.1);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  .card-icon {
+    pointer-events: none;
+    filter: brightness(1) invert(1);
+    color: #000000;
+    width: 55px;
+    height: 55px;
+  }
+  .card-title {
+    pointer-events: none;
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+  .card-center {
+    height: 150px;
+  }
+}
+.calculator-card.selected {
+  background: #7C24F8;
+  color: #ffffff;
+  box-shadow: 0px 4px 30px rgba(25, 42, 89, 0.15);
+  .card-icon {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.w-25 .calculator-card {
+  height: 200px;
+}
+
+.w-30 .calculator-card {
+  height: 250px;
+}
+
+.w-50 .calculator-card {
+  height: 300px;
+}
