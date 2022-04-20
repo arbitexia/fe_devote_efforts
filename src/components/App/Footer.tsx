@@ -25,7 +25,7 @@ function Footer() {
             </div>
           </div>
           <div className="footer-rightbar sw-12">
-            <ul className="w-6">
+            <ul className="w-50">
               <li className="footer-ul-header">Menu</li>
               <li>
                 <Link className="ul-box anchor" to="/">
@@ -54,7 +54,7 @@ function Footer() {
               </li>
             </ul>
 
-            <ul className="w-6">
+            <ul className="w-50">
               <li className="footer-ul-header">Company</li>
               <li>
                 <Link className="ul-box anchor" to="/">

@@ -24,23 +24,8 @@
     justify-content: center;
     align-items: center;
   }
-  .connect-caption h2{
-    align-self: center;
-    max-width: 551px;
-    margin-top: 15px;
-    font-weight: 500;
-    font-size: 62px;
-    line-height: 120%;
-    letter-spacing: -0.05em;
-    text-align: center;
-    color: #000000;
-    span {
-      font-weight: 500;
-      font-size: 62px;
-      line-height: 120%;
-      letter-spacing: -0.05em;
-      color: #5a368d;
-    }
+  .connect-caption {
+    @include section-header(551px);
   }
   .email-input{
     margin-top: 45px;
@@ -67,9 +52,6 @@
     margin-top: 50px;
     padding: 0;
     z-index: 1;
-    @include btn-arrow;
-    &::before {
-      transform: rotate(-35deg);
-    }
+    @include btn-arrow(right, -35deg);
   }
 }

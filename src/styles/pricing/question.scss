@@ -2,23 +2,8 @@
 
 .question{
   margin: 180px 0px;
-  .question-caption h2{
-    font-weight: 500;
-    font-size: 62px;
-    line-height: 110%;
-    letter-spacing: -0.05em;
-    align-self: center;
-    text-align: center;
-    color: #000000;
-  }
-  .question-caption .business {
-    font-weight: 500;
-    font-size: 62px;
-    line-height: 110%;
-    letter-spacing: -0.05em;
-    text-align: center;
-    align-self: center;
-    color: #5a368d;
+  .question-caption {
+    @include section-header(100%);
   }
   .description{
     max-width: 844px;

@@ -1,15 +1,8 @@
 @import '../config.scss';
 .top{
   .top-caption{
+    @include section-header(531px, left);
     margin-top: 70px;
-    max-width: 531px;
-    font-weight: 500;
-    font-size: 62px;
-    line-height: 110%;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.07em;
-    color: #000000;
   }
   .top-description{
     margin-top: 50px;

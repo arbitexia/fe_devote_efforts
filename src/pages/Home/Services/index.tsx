@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
-import ServiceCardItems from './ServiceCardItem';
-import ServiceCard from './ServiceCard';
+import { cards } from './mock-data';
+import ServiceCard from './ServiceCard.cpn';
 import '@/styles/home/services.scss';
 
 function Services() {
@@ -43,7 +43,7 @@ function Services() {
             </div>
           </div>
           <div className="service-cards space-between row-wrap wgs-2 wge-8 swg wg">
-            {ServiceCardItems.map((card, i) => {
+            {cards.map((card, i) => {
               return (
                 <ServiceCard
                   key={i}

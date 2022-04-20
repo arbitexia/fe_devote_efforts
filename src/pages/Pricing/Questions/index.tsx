@@ -8,13 +8,13 @@ function Questions() {
         <div className="grid-layout">
           <div className="question-caption wgs-2 wge-8 swg wg">
             <h2>Still unsure about something?</h2>
-            <div className="business">Frequently asked questions</div>
+            <span>Frequently asked questions</span>
           </div>
           <div className="list wgs-2 wge-8 swg wg">
             <ul>
               {listData.map((item, index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <input type="checkbox" id={`list-item-${index}`} />
                     <div className="header">
                       {item.title}
