@@ -1,5 +1,5 @@
 import '@/styles/pricing/calculator.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CalculatorCard from './CalculatorCard.cpn';
 import { mobileData } from './mock-data';
 import { totalData } from './mock-data';
@@ -11,17 +11,39 @@ function Calculator() {
   const [price, setPrice] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalShow, setTotalShow] = useState(false);
+  const [pageData, setPageData] = useState(() => {
+    const tmpData = JSON.parse(localStorage.getItem('pageData'));
+    return tmpData || mobileData;
+  });
   const pageNum = webPageNum;
-  const pageData = mobileData;
+
+  useEffect(() => {
+    localStorage.setItem('pageData', JSON.stringify(pageData));
+    let totalPrice = 0;
+    pageData.map((page) => {
+      page.data.map((section) => {
+        section.datas.map((item) => {
+          if (item.selected) totalPrice += item.price;
+        });
+      });
+    });
+    setPrice(totalPrice);
+  }, [pageData]);
 
   const cardClick = (e, p, index) => {
     if (e.target.className.includes('selected')) {
-      pageData[currentPage - 1].data[p].datas[index].selected = false;
-      setPrice(price - pageData[currentPage - 1].data[p].datas[index].price);
+      setPageData((item) => {
+        const newItem = [...item];
+        newItem[currentPage - 1].data[p].datas[index].selected = false;
+        return newItem;
+      });
       e.target.classList.remove('selected');
     } else {
-      setPrice(price + pageData[currentPage - 1].data[p].datas[index].price);
-      pageData[currentPage - 1].data[p].datas[index].selected = true;
+      setPageData((item) => {
+        const newItem = [...item];
+        newItem[currentPage - 1].data[p].datas[index].selected = true;
+        return newItem;
+      });
       e.target.classList.add('selected');
     }
   };
